@@ -1,14 +1,8 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const navigationItems = [
-  { label: "HOME", href: "#" },
-  { label: "PROJECTS", href: "#" },
-  { label: "EVENTS", href: "#" },
-  { label: "TEAMS", href: "#" },
-  { label: "JOIN & CONNECT", href: "#" },
-];
+import { Navigation } from "@/components/layout/Navigation";
+import { Footer } from "@/components/layout/Footer";
+import { Link } from "wouter";
 
 const statsData = [
   { value: "80+ Active Members" },
@@ -51,24 +45,7 @@ const timelineEvents = [
 export const Home = (): JSX.Element => {
   return (
     <div className="bg-white w-full min-w-[1440px] relative">
-      <nav className="flex items-center justify-between px-12 py-6">
-        <img
-          className="w-[72px] h-[57px]"
-          alt="Logo enhanced"
-          src="/figmaAssets/logo-enhanced-1.png"
-        />
-        <div className="flex items-center gap-6">
-          {navigationItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="flex items-center justify-center h-[41px] [font-family:'Khmer',Helvetica] font-normal text-black text-2xl text-center tracking-[0] leading-[normal] hover:opacity-70 transition-opacity"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <Navigation />
 
       <section className="relative px-12 py-16 flex items-start justify-between">
         <div className="w-[706px]">
@@ -132,9 +109,11 @@ export const Home = (): JSX.Element => {
               and impactful engineering challenges. This led to a strategic
               pivot from battlebots to planetary rover development.
             </p>
-            <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] [font-family:'Khmer',Helvetica] font-normal text-neutral-50 text-xl">
-              Learn More
-            </Button>
+            <Link href="/projects">
+              <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] [font-family:'Khmer',Helvetica] font-normal text-neutral-50 text-xl">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -261,6 +240,8 @@ export const Home = (): JSX.Element => {
         alt="Element removebg preview"
         src="/figmaAssets/3-removebg-preview-4.png"
       />
+
+      <Footer />
     </div>
   );
 };
