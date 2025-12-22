@@ -76,16 +76,6 @@ export const Home = (): JSX.Element => {
           alt="Image"
           src="/figmaAssets/image-17.png"
         />
-        <img
-          className="absolute top-[35px] left-[100px] w-[89px] h-[87px]"
-          alt="Element removebg preview"
-          src="/figmaAssets/1-removebg-preview-2.png"
-        />
-        <img
-          className="absolute top-[232px] left-0 w-[35px] h-[70px]"
-          alt="Element removebg preview"
-          src="/figmaAssets/1-removebg-preview-2-1.png"
-        />
 
         <div className="relative flex items-start justify-end px-12 py-32 min-h-[819px]">
           <div className="w-[600px] ml-auto">
@@ -137,22 +127,6 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative px-12 py-24">
-        <img
-          className="absolute top-[-91px] right-0 w-[213px] h-[381px] object-cover"
-          alt="Element removebg preview"
-          src="/figmaAssets/3-removebg-preview-4.png"
-        />
-        <img
-          className="absolute top-[915px] left-[65px] w-[89px] h-[87px]"
-          alt="Element removebg preview"
-          src="/figmaAssets/1-removebg-preview-6.png"
-        />
-        <img
-          className="absolute top-[914px] right-0 w-[127px] h-[376px] object-cover"
-          alt="Element removebg preview"
-          src="/figmaAssets/1-removebg-preview-3-1.png"
-        />
-
         <div className="max-w-[1158px] mx-auto">
           <h2 className="text-[#1a1a1a] text-center [font-family:'Inter',Helvetica] font-bold text-5xl tracking-[0] leading-[48px] mb-24">
             OUR JOURNEY
@@ -219,28 +193,6 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      <img
-        className="absolute top-[581px] left-0 w-[307px] h-[503px] object-cover"
-        alt="Element removebg preview"
-        src="/figmaAssets/3-removebg-preview-4.png"
-      />
-      <img
-        className="absolute top-[709px] left-0 w-[159px] h-[375px]"
-        alt="Element removebg preview"
-        src="/figmaAssets/1-removebg-preview-3.png"
-      />
-      <img
-        className="absolute top-[1049px] left-0 w-[108px] h-[376px] object-cover"
-        alt="Element removebg preview"
-        src="/figmaAssets/1-removebg-preview-3-1.png"
-      />
-      <img
-        className="absolute top-[2701px] left-0 w-[180px] h-[523px] object-cover"
-        alt="Element removebg preview"
-        src="/figmaAssets/3-removebg-preview-4.png"
-      />
-
       <Footer />
     </div>
   );
