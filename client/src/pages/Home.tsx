@@ -64,46 +64,52 @@ export const Home = (): JSX.Element => {
           </p>
         </div>
         <img
-          className="w-[614px] h-[616px]"
+          className="w-[600px] h-[600px]"
           alt="Image"
           src="/figmaAssets/image-9.png"
         />
       </section>
 
       <section className="relative bg-[linear-gradient(135deg,rgba(255,152,0,1)_0%,rgba(255,167,39,1)_50%,rgba(255,183,77,1)_100%)] overflow-hidden">
-        <img
-          className="absolute top-[127px] left-[59px] w-[621px] h-[621px]"
-          alt="Image"
-          src="/figmaAssets/image-17.png"
-        />
+        <div className="relative px-12 py-32 min-h-[600px]">
+          <div className="max-w-[1220px] ml-0 flex items-start gap-16">
+            {/* Left: image */}
+            <div className="h-[520px] w-[520px] flex-shrink-0">
+              <img
+                className="w-full h-auto rounded-[20px]"
+                alt="Image"
+                src="/figmaAssets/image-17.png"
+              />
+            </div>
 
-        <div className="relative flex items-start justify-end px-12 py-32 min-h-[819px]">
-          <div className="w-[600px] ml-auto">
-            <h2 className="[font-family:'Inter',Helvetica] font-bold text-black text-5xl tracking-[0] leading-[48px] mb-8">
-              OUR STORY
-            </h2>
-            <p className="[font-family:'Khmer',Helvetica] font-normal text-black text-xl tracking-[0] leading-[30px] mb-8">
-              The Toronto Autonomous Systems Collective (TASC) is a student-run
-              design and research team focused on robotics and autonomous
-              systems. Founded at Toronto Metropolitan University under the
-              Innovation Boost Zone, the organisation is dedicated to providing
-              hands-on, experiential learning opportunities that prepare
-              students for an evolving technological landscape and for careers
-              in engineering, science, and related fields.\
-              <br />
-              TASC began as a combat-robotics team with the goal of competing in
-              events such as BotBrawl Ontario. The team entered its first
-              competition at the CNE BotBrawl in September 2024, earning the
-              title of Best Rookie. Following this success, TASC reassessed its
-              long-term ambition and identified a desire to pursue more complex
-              and impactful engineering challenges. This led to a strategic
-              pivot from battlebots to planetary rover development.
-            </p>
-            <Link href="/projects">
-              <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] [font-family:'Khmer',Helvetica] font-normal text-neutral-50 text-xl">
-                Learn More
-              </Button>
-            </Link>
+            {/* Right: text */}
+            <div className="flex-">
+              <h2 className="[font-family:'Inter',Helvetica] font-bold text-black text-5xl tracking-[0] leading-[48px] mb-8">
+                OUR STORY
+              </h2>
+              <p className="[font-family:'Khmer',Helvetica] font-normal text-black text-xl tracking-[0] leading-[30px] mb-8">
+                The Toronto Autonomous Systems Collective (TASC) is a student-run
+                design and research team focused on robotics and autonomous
+                systems. Founded at Toronto Metropolitan University under the
+                Innovation Boost Zone, the organisation is dedicated to providing
+                hands-on, experiential learning opportunities that prepare
+                students for an evolving technological landscape and for careers
+                in engineering, science, and related fields.
+                <br />
+                TASC began as a combat-robotics team with the goal of competing in
+                events such as BotBrawl Ontario. The team entered its first
+                competition at the CNE BotBrawl in September 2024, earning the
+                title of Best Rookie. Following this success, TASC reassessed its
+                long-term ambition and identified a desire to pursue more complex
+                and impactful engineering challenges. This led to a strategic
+                pivot from battlebots to planetary rover development.
+              </p>
+              <Link href="/projects">
+                <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] [font-family:'Khmer',Helvetica] font-normal text-neutral-50 text-xl">
+                  Learn More
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

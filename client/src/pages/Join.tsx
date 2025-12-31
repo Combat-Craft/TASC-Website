@@ -25,18 +25,17 @@ const contactMethods = [
 ];
 
 const sponsors = [
-  "Sponsor 1",
-  "Sponsor 2",
-  "Sponsor 3",
-  "Sponsor 4",
-  "Sponsor 5",
-  "Sponsor 6",
-  "Sponsor 7",
-  "Sponsor 8",
-  "Sponsor 9",
-  "Sponsor 10",
-  "Sponsor 11",
-  "Sponsor 12",
+  { name: "Sponsor 1", image: "/figmaAssets/Sponsor_1.png" },
+  { name: "Sponsor 2", image: "/figmaAssets/Sponsor_2.png" },
+  { name: "Sponsor 3", image: "/figmaAssets/Sponsor_3.png" },
+  { name: "Sponsor 4", image: "/figmaAssets/Sponsor_4.png" },
+  { name: "Sponsor 5", image: "/figmaAssets/Sponsor_5.png" },
+  { name: "Sponsor 6", image: "/figmaAssets/Sponsor_6.png" },
+  { name: "Sponsor 7", image: "/figmaAssets/Sponsor_7.png" },
+  { name: "Sponsor 8", image: "/figmaAssets/Sponsor_8.png" },
+  { name: "Sponsor 9", image: "/figmaAssets/Sponsor_9.png" },
+  { name: "Sponsor 10", image: "/figmaAssets/Sponsor_10.png" },
+  { name: "Sponsor 11", image: "/figmaAssets/Sponsor_11.png" },
 ];
 
 export const Join = () => {
@@ -118,8 +117,8 @@ export const Join = () => {
               Apply Now
             </Button>
           </div>
-          <div className="w-[709px] h-[525px] rounded-[20px] bg-gray-300 flex items-center justify-center">
-            <p className="text-gray-500 text-xl">Team photo placeholder</p>
+          <div className="w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
+            <img src="/figmaAssets/Join Our Team.png" alt="Team photo" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -159,9 +158,9 @@ export const Join = () => {
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}
-                className="w-[260px] h-[260px] mx-auto border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center bg-white"
+                className="w-[260px] h-[260px] mx-auto border-2 border-[#0a1f44] rounded-[20px] overflow-hidden bg-white"
               >
-                <span className="text-gray-400">{sponsor}</span>
+                <img src={sponsor.image} alt={sponsor.name} className="w-full h-full object-contain p-4" />
               </div>
             ))}
           </div>

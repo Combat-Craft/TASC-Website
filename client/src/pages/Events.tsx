@@ -11,14 +11,28 @@ const pastEvents = [
     dates: "8th Aug 2025 - 11th Aug 2025",
     location: "Badland Community Facility, Drumheller, AB, Canada",
     description: "The team travelled to Drumheller, Alberta for a 4 day challenge in the desert. We tested our rover against the harsh, simulated Martian environment that challenged our work on multiple frontiers.",
-    images: [], 
+    logo: "/figmaAssets/Logo_CIRC.png",
+    images: [
+      "/figmaAssets/CIRC_1.JPG",
+      "/figmaAssets/CIRC_2.JPG",
+      "/figmaAssets/CIRC_3.JPG",
+      "/figmaAssets/CIRC_4.JPG",
+      "/figmaAssets/CIRC_5.JPG",
+    ],
   },
   {
     name: "CNE BotBrawl",
     dates: "21st Aug 2024 - 1st Sep 2024",
     location: "210 Princes' Blvd Etobicoke, ON, Canada",
     description: "The team participated in BotBrawl at the CNE, competing in the 30 lb combat robotics category. We showcased our robot across multiple matches and were awarded \"Best Rookie\" for our strong performance and innovative design.",
-    images: [],
+    logo: "/figmaAssets/Logo_CNE.png",
+    images: [
+      "/figmaAssets/CNE_1.JPG",
+      "/figmaAssets/CNE_2.JPG",
+      "/figmaAssets/CNE_3.JPG",
+      "/figmaAssets/CNE_4.JPG",
+      "/figmaAssets/CNE_5.JPG",
+    ],
   },
 ];
 
@@ -90,8 +104,8 @@ export const Events = () => {
               <CardContent className="p-8">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-[90px] h-[90px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center">
-                      <span className="text-2xl">📍</span>
+                    <div className="w-[90px] h-[90px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center overflow-hidden">
+                      <img src={event.logo} alt={event.name} className="w-full h-full object-contain p-2" />
                     </div>
                     <h3 className="font-bold text-5xl">{event.name}</h3>
                   </div>
@@ -114,12 +128,12 @@ export const Events = () => {
                 </div>
 
                 <div className="flex gap-4 overflow-x-auto pb-4">
-                  {[1, 2, 3, 4, 5].map((_, imgIndex) => (
+                  {event.images.map((image, imgIndex) => (
                     <div
                       key={imgIndex}
-                      className="w-[260px] h-[260px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex-shrink-0 flex items-center justify-center"
+                      className="w-[260px] h-[260px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex-shrink-0 overflow-hidden"
                     >
-                      <span className="text-gray-400">Image {imgIndex + 1}</span>
+                      <img src={image} alt={`${event.name} ${imgIndex + 1}`} className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
