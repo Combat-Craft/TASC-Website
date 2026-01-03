@@ -11,6 +11,31 @@
   --animate-spin: spin 1s linear infinite;
 }
 
+@font-face {
+  font-family: 'Stopmotion';
+  src: url('/fonts/Stopmotion.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeVietnam';
+  src: url('/fonts/BeVietnam-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'BeVietnam', Helvetica, Arial, sans-serif;
+}
+
 .animate-fade-in {
   animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
 }

@@ -64,8 +64,8 @@ const TeamMemberCard = ({ name, role, image }: { name: string; role: string; ima
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-        <p className="font-bold text-xl text-black">{name}</p>
-        <p className="text-lg text-black">{role}</p>
+        <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{name}</p>
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{role}</p>
       </div>
     </CardContent>
   </Card>
@@ -73,18 +73,18 @@ const TeamMemberCard = ({ name, role, image }: { name: string; role: string; ima
 
 export const Team = () => {
   return (
-    <div className="bg-white w-full min-w-[1440px]">
+    <div className="bg-white w-full">
       <Navigation />
 
       <section className="px-12 py-16">
-        <h1 className="font-bold text-5xl text-black text-center mb-4">
+        <h1 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-4">
           OUR TEAM
         </h1>
 
         <div className="relative rounded-[20px] py-16 px-12 mb-16" style={{
           backgroundImage: "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)"
         }}>
-          <h2 className="font-bold text-5xl text-[#1a1a1a] text-center mb-12">
+          <h2 className="[font-family:'Poppins'] font-bold text-[30px] text-black text-center mb-8">
             Team Captains
           </h2>
           <div className="flex justify-center gap-16">
@@ -95,8 +95,8 @@ export const Team = () => {
                     <img src={captain.image} alt={captain.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-                    <p className="font-bold text-2xl text-black">{captain.name}</p>
-                    <p className="text-2xl text-black">{captain.role}</p>
+                    <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
+                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -104,13 +104,13 @@ export const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 max-w-[1300px] mx-auto mb-24">
+        <div className="grid grid-cols-3 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
           {teamLeads.map((member, index) => (
             <TeamMemberCard key={index} name={member.name} role={member.role} image={member.image} />
           ))}
         </div>
 
-        <h2 className="font-bold text-5xl text-black text-center mb-12">
+        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-12">
           OUR SUBTEAMS
         </h2>
 
@@ -118,9 +118,9 @@ export const Team = () => {
           {subteams.map((subteam, index) => (
             <Card key={index} className="rounded-[20px] bg-neutral-50 border-0">
               <CardContent className="p-8">
-                <h3 className="font-bold text-5xl text-black mb-6">{subteam.name}</h3>
+                <h3 className="[font-family:'Poppins'] font-bold text-[30px] text-black mb-6">{subteam.name}</h3>
                 <div className="bg-[#ff9800] rounded-[20px] p-8">
-                  <p className="text-[25px] text-black text-center leading-[60px]">
+                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px]">
                     {subteam.description}
                   </p>
                 </div>
