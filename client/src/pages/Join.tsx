@@ -12,8 +12,8 @@ const contactMethods = [
   },
   {
     icon: "✉️",
-    label: "tasc@gmail.com",
-    link: "mailto:tasc@gmail.com",
+    label: "tmutasc@gmail.com",
+    link: "mailto:tmutasc@gmail.com",
     src: "/figmaAssets/Gmail_Logo_512px.png",
   },
   {
