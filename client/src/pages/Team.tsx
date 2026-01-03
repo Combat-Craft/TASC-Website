@@ -3,27 +3,27 @@ import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 
 const teamCaptains = [
-  { name: "Ahmed Tabl", role: "Communications & Controls Lead", image: null },
-  { name: "Aditya Sajwan", role: "Power & Energy Systems Lead", image: null },
+  { name: "Ahmed Tabl", role: "Communications & Controls Lead", image: "/figmaAssets/Ahmed Tabl.png" },
+  { name: "Aditya Sajwan", role: "Power & Energy Systems Lead", image: "/figmaAssets/Aditya Sajwan.png" },
 ];
 
 const teamLeads = [
-  { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: null },
-  { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: null },
-  { name: "Umar Shabbir, Advisor", role: "B.Eng Aerospace Engineering", image: null },
-  { name: "Muntasir Munir", role: "Autonomous Navigation Lead", image: null },
-  { name: "Tim Laurence Andal", role: "Drivetrain & Chassis Lead", image: null },
-  { name: "Ashu Syal. Advisor", role: "B.Eng Director, Innovation Boost Zone", image: null },
-  { name: "Harjeev Kohli, Founder, Advisor", role: "Business Development", image: null },
-  { name: "Tabitha Grant, Advisor", role: "Manager, Centre for Engineering Innovation and Entrepreneurship", image: null },
-  { name: "Antonia Hoffman, Advisor", role: "PhD Candidate Aerospace Engineering", image: null },
-  { name: "Rida-E Fatima", role: "Communications and Controls", image: null },
-  { name: "Pranav Amladi", role: "Power & Energy Systems Lead", image: null },
-  { name: "Aashir Ahmed", role: "Arm Dynamics", image: null },
-  { name: "Ahmad Zaki Momand", role: "Arm Dynamics", image: null },
-  { name: "Fahmida Parvage", role: "Scientific Analysis", image: null },
-  { name: "Ikkena Agusiegbe", role: "Scientific Analysis", image: null },
-  { name: "Christian Turjuman", role: "Power and Energy Systems", image: null },
+  { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
+  { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png" },
+  { name: "Umar Shabbir, Advisor", role: "B.Eng Aerospace Engineering", image: "/figmaAssets/Umar Shabbir.png" },
+  { name: "Muntasir Munir", role: "Autonomous Navigation Lead", image: "/figmaAssets/Muntasir Munir.png" },
+  { name: "Tim Laurence Andal", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Tim Laurence Andal.png" },
+  { name: "Ashu Syal. Advisor", role: "B.Eng Director, Innovation Boost Zone", image: "/figmaAssets/Ashu Syal.png" },
+  { name: "Harjeev Kohli, Founder, Advisor", role: "Business Development", image: "/figmaAssets/Harjeev Kohli.png" },
+  { name: "Tabitha Grant, Advisor", role: "Manager, Centre for Engineering Innovation and Entrepreneurship", image: "/figmaAssets/Tabitha Grant.png" },
+  { name: "Antonia Hoffman, Advisor", role: "PhD Candidate Aerospace Engineering", image: "/figmaAssets/Antonia Hoffman.png" },
+  { name: "Rida-E Fatima", role: "Communications and Controls", image: "/figmaAssets/Rida-E Fatima.png" },
+  { name: "Pranav Amladi", role: "Power & Energy Systems Lead", image: "/figmaAssets/Pranav Amladi.png" },
+  { name: "Aashir Ahmed", role: "Arm Dynamics", image: "/figmaAssets/Aashir Ahmed.png" },
+  { name: "Ahmad Zaki Momand", role: "Arm Dynamics", image: "/figmaAssets/Ahmad Zaki Momand.png" },
+  { name: "Fahmida Parvage", role: "Scientific Analysis", image: "/figmaAssets/Fahmida Parvage.png" },
+  { name: "Ikkena Agusiegbe", role: "Scientific Analysis", image: "/figmaAssets/Ikkena Agusiegbe.png" },
+  { name: "Christian Turjuman", role: "Power and Energy Systems", image: "/figmaAssets/Christian Turjuman.png" },
 ];
 
 const subteams = [
@@ -57,15 +57,15 @@ const subteams = [
   },
 ];
 
-const TeamMemberCard = ({ name, role }: { name: string; role: string }) => (
+const TeamMemberCard = ({ name, role, image }: { name: string; role: string; image: string }) => (
   <Card className="w-[390px] rounded-[20px] bg-neutral-50 border-0">
     <CardContent className="p-6 text-center">
-      <div className="w-[258px] h-[258px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center">
-        <span className="text-gray-400 text-sm">Photo</span>
+      <div className="w-[258px] h-[258px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center overflow-hidden">
+        <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-        <p className="font-bold text-xl text-black">{name}</p>
-        <p className="text-lg text-black">{role}</p>
+        <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{name}</p>
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{role}</p>
       </div>
     </CardContent>
   </Card>
@@ -73,30 +73,30 @@ const TeamMemberCard = ({ name, role }: { name: string; role: string }) => (
 
 export const Team = () => {
   return (
-    <div className="bg-white w-full min-w-[1440px]">
+    <div className="bg-white w-full">
       <Navigation />
 
       <section className="px-12 py-16">
-        <h1 className="font-bold text-5xl text-black text-center mb-4">
+        <h1 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-4">
           OUR TEAM
         </h1>
 
         <div className="relative rounded-[20px] py-16 px-12 mb-16" style={{
           backgroundImage: "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)"
         }}>
-          <h2 className="font-bold text-5xl text-[#1a1a1a] text-center mb-12">
+          <h2 className="[font-family:'Poppins'] font-bold text-[30px] text-black text-center mb-8">
             Team Captains
           </h2>
           <div className="flex justify-center gap-16">
             {teamCaptains.map((captain, index) => (
               <Card key={index} className="w-[470px] rounded-[20px] bg-neutral-50 border-0">
                 <CardContent className="p-8 text-center">
-                  <div className="w-[317px] h-[317px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center">
-                    <span className="text-gray-400">Photo</span>
+                  <div className="w-[317px] h-[317px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center overflow-hidden">
+                    <img src={captain.image} alt={captain.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-                    <p className="font-bold text-2xl text-black">{captain.name}</p>
-                    <p className="text-2xl text-black">{captain.role}</p>
+                    <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
+                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -104,13 +104,13 @@ export const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 max-w-[1300px] mx-auto mb-24">
+        <div className="grid grid-cols-3 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
           {teamLeads.map((member, index) => (
-            <TeamMemberCard key={index} name={member.name} role={member.role} />
+            <TeamMemberCard key={index} name={member.name} role={member.role} image={member.image} />
           ))}
         </div>
 
-        <h2 className="font-bold text-5xl text-black text-center mb-12">
+        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-12">
           OUR SUBTEAMS
         </h2>
 
@@ -118,9 +118,9 @@ export const Team = () => {
           {subteams.map((subteam, index) => (
             <Card key={index} className="rounded-[20px] bg-neutral-50 border-0">
               <CardContent className="p-8">
-                <h3 className="font-bold text-5xl text-black mb-6">{subteam.name}</h3>
+                <h3 className="[font-family:'Poppins'] font-bold text-[30px] text-black mb-6">{subteam.name}</h3>
                 <div className="bg-[#ff9800] rounded-[20px] p-8">
-                  <p className="text-[25px] text-black text-center leading-[60px]">
+                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px]">
                     {subteam.description}
                   </p>
                 </div>

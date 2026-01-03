@@ -25,33 +25,38 @@ const contactMethods = [
 ];
 
 const sponsors = [
-  "Sponsor 1",
-  "Sponsor 2",
-  "Sponsor 3",
-  "Sponsor 4",
-  "Sponsor 5",
-  "Sponsor 6",
-  "Sponsor 7",
-  "Sponsor 8",
-  "Sponsor 9",
-  "Sponsor 10",
-  "Sponsor 11",
-  "Sponsor 12",
+  { name: "Sponsor 1", image: "/figmaAssets/Sponsor_1.png" },
+  { name: "Sponsor 2", image: "/figmaAssets/Sponsor_2.png" },
+  { name: "Sponsor 3", image: "/figmaAssets/Sponsor_3.png" },
+  { name: "Sponsor 4", image: "/figmaAssets/Sponsor_4.png" },
+  { name: "Sponsor 5", image: "/figmaAssets/Sponsor_5.png" },
+  { name: "Sponsor 6", image: "/figmaAssets/Sponsor_6.png" },
+  { name: "Sponsor 7", image: "/figmaAssets/Sponsor_7.png" },
+  { name: "Sponsor 8", image: "/figmaAssets/Sponsor_8.png" },
+  { name: "Sponsor 9", image: "/figmaAssets/Sponsor_9.png" },
+  { name: "Sponsor 10", image: "/figmaAssets/Sponsor_10.png" },
+  { name: "Sponsor 11", image: "/figmaAssets/Sponsor_11.png" },
 ];
 
 export const Join = () => {
   return (
-    <div className="bg-white w-full min-w-[1440px]">
+    <div className="bg-white w-full">
       <Navigation />
 
       <section className="px-12 py-16">
-        <h1 className="font-bold text-5xl text-black text-center mb-12">
+        <h1 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-12">
           CONTACT US
         </h1>
 
         <div className="flex justify-center gap-12 mb-16">
           {contactMethods.map((method, index) => (
-            <div key={index} className="text-center">
+            <a
+              key={index}
+              href={method.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center hover:opacity-80 transition-opacity"
+            >
               <Card className="w-[289px] h-[289px] rounded-[150px] bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center mb-4">
                 <CardContent className="p-0 flex items-center justify-center">
                   <span className="text-5xl">
@@ -63,21 +68,16 @@ export const Join = () => {
                   </span>
                 </CardContent>
               </Card>
-              <a
-                href={method.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[28px] text-black hover:text-[#ff9800] transition-colors"
-              >
+              <span className="[font-family:'Poppins'] font-bold text-[30px] text-black">
                 {method.label}
-              </a>
-            </div>
+              </span>
+            </a>
           ))}
         </div>
 
         <div className="bg-neutral-50 rounded-[20px] p-8 max-w-[1361px] mx-auto mb-8">
           <div className="h-[425px] rounded-[20px] bg-gray-200 flex items-center justify-center mb-4">
-            <p className="text-gray-500 text-xl">
+            <p className="text-gray-500 text-[16px]">
               Map placeholder - 20 Dundas St W Suite 921, Toronto, ON
             </p>
           </div>
@@ -87,7 +87,7 @@ export const Join = () => {
                 <span className="text-3xl">📍</span>
               </CardContent>
             </Card>
-            <p className="font-bold text-[28px] text-black">
+            <p className="[font-family:'Poppins'] font-bold text-[30px] text-black">
               20 Dundas St W Suite 921, Toronto, ON
             </p>
           </div>
@@ -103,10 +103,10 @@ export const Join = () => {
       >
         <div className="px-12 flex gap-12 items-start">
           <div className="flex-1">
-            <h2 className="font-bold text-5xl text-black mb-8">
+            <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black mb-4">
               JOIN OUR TEAM
             </h2>
-            <p className="text-[25px] text-black leading-[35px] mb-8 max-w-[574px]">
+            <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
               TASC welcomes students from all disciplines who are eager to
               learn, build, and push the boundaries of robotics and autonomous
               systems. Whether you're interested in mechanical design, embedded
@@ -114,21 +114,21 @@ export const Join = () => {
               operations, or project management, there is a place for you on the
               team.
             </p>
-            <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-xl text-white">
+            <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[16px] text-white">
               Apply Now
             </Button>
           </div>
-          <div className="w-[709px] h-[525px] rounded-[20px] bg-gray-300 flex items-center justify-center">
-            <p className="text-gray-500 text-xl">Team photo placeholder</p>
+          <div className="w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
+            <img src="/figmaAssets/Join Our Team.png" alt="Team photo" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
 
       <section className="px-12 py-24">
-        <h2 className="font-bold text-5xl text-[#1a1a1a] text-center mb-8">
+        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-4">
           BECOME A SPONSOR
         </h2>
-        <p className="text-xl text-black text-center max-w-[1032px] mx-auto leading-[35px] mb-8">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
           TASC partners with organizations that share a passion for innovation,
           education, and the advancement of robotics. Sponsorship directly
           supports the development of our autonomous systems projects—providing
@@ -141,15 +141,15 @@ export const Join = () => {
           pipeline.
         </p>
         <div className="text-center mb-16">
-          <Button className="h-[51px] px-8 bg-[#ff9800] hover:bg-[#ff9800]/90 rounded-[20px] text-xl text-black">
+          <Button className="h-[51px] px-8 bg-[#ff9800] hover:bg-[#ff9800]/90 rounded-[20px] font-normal [font-family:'BeVietnam'] text-[20px] text-black">
             Sponsorship Package
           </Button>
         </div>
 
-        <h2 className="font-bold text-5xl text-[#1a1a1a] text-center mb-8">
+        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-8">
           OUR CURRENT SPONSORS
         </h2>
-        <p className="text-xl text-black text-center max-w-[568px] mx-auto leading-[30px] mb-12">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-center text-[20px] tracking-[0] leading-[30px] mb-8">
           We would like to thank our sponsors for supporting us. Their impact on
           TASC is directly reflected in our continuous progress.
         </p>
@@ -159,9 +159,9 @@ export const Join = () => {
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}
-                className="w-[260px] h-[260px] mx-auto border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center bg-white"
+                className="w-[260px] h-[260px] mx-auto border-2 border-[#0a1f44] rounded-[20px] overflow-hidden bg-white"
               >
-                <span className="text-gray-400">{sponsor}</span>
+                <img src={sponsor.image} alt={sponsor.name} className="w-full h-full object-contain p-4" />
               </div>
             ))}
           </div>
