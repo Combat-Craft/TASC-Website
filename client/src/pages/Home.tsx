@@ -76,7 +76,7 @@ export const Home = (): JSX.Element => {
               <img
                 className="w-full h-auto rounded-[20px]"
                 alt="Image"
-                src="/figmaAssets/image-17.png"                
+                src="/figmaAssets/image-17.png"
               />
             </div>
 
@@ -86,23 +86,23 @@ export const Home = (): JSX.Element => {
                 OUR STORY
               </h2>
               <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
-                The Toronto Autonomous Systems Collective (TASC) is a student-run
-                design and research team focused on robotics and autonomous
-                systems. Founded at Toronto Metropolitan University under the
-                Innovation Boost Zone, the organisation is dedicated to providing
-                hands-on, experiential learning opportunities that prepare
-                students for an evolving technological landscape and for careers
-                in engineering, science, and related fields.
+                The Toronto Autonomous Systems Collective (TASC) is a
+                student-run design and research team focused on robotics and
+                autonomous systems. Founded at Toronto Metropolitan University
+                under the Innovation Boost Zone, the organisation is dedicated
+                to providing hands-on, experiential learning opportunities that
+                prepare students for an evolving technological landscape and for
+                careers in engineering, science, and related fields.
                 <br />
-                TASC began as a combat-robotics team with the goal of competing in
-                events such as BotBrawl Ontario. The team entered its first
+                TASC began as a combat-robotics team with the goal of competing
+                in events such as BotBrawl Ontario. The team entered its first
                 competition at the CNE BotBrawl in September 2024, earning the
-                title of Best Rookie. Following this success, TASC reassessed its
-                long-term ambition and identified a desire to pursue more complex
-                and impactful engineering challenges. This led to a strategic
-                pivot from battlebots to planetary rover development.
+                title of Best Rookie. Following this success, TASC reassessed
+                its long-term ambition and identified a desire to pursue more
+                complex and impactful engineering challenges. This led to a
+                strategic pivot from battlebots to planetary rover development.
               </p>
-              <Link href="/projects">
+              <Link href="/Learnmore">
                 <Button className="[font-family:'BeVietnam'] h-[45px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] font-normal text-neutral-50 text-[20px] justify-center">
                   Learn More
                 </Button>
@@ -113,9 +113,9 @@ export const Home = (): JSX.Element => {
       </section>
 
       <section className="relative py-8">
-        <div className="absolute top-0 left-0 w-max h-[361px] rounded-[20px]"/>
-          <div className="relative flex justify-center bg-neutral-50 p-8 ml-8 mr-8 rounded-[20px]">
-            <div className="grid grid-cols-4 gap-8">
+        <div className="absolute top-0 left-0 w-max h-[361px] rounded-[20px]" />
+        <div className="relative flex justify-center bg-neutral-50 p-8 ml-8 mr-8 rounded-[20px]">
+          <div className="grid grid-cols-4 gap-8">
             {statsData.map((stat, index) => (
               <Card
                 key={index}
@@ -139,7 +139,7 @@ export const Home = (): JSX.Element => {
           </h2>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 w-1.5 h-full bg-[#0a1f44] -translate-x-1/2"/>
+            <div className="absolute left-1/2 top-0 w-1.5 h-full bg-[#0a1f44] -translate-x-1/2" />
 
             <div className="space-y-32">
               {timelineEvents.map((event, index) => (
@@ -151,11 +151,11 @@ export const Home = (): JSX.Element => {
                       <div className="w-1/2" />
                       <div className="w-1/2 flex flex-col items-start gap-6">
                         <Card className="w-[289px] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
-                            <CardContent className="p-0 flex items-center justify-center">
-                              <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
-                                {event.year}
-                              </p>
-                            </CardContent>
+                          <CardContent className="p-0 flex items-center justify-center">
+                            <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
+                              {event.year}
+                            </p>
+                          </CardContent>
                         </Card>
                         <Card className="w-[504px] rounded-[20px] border-4 border-[#0a1f44] bg-white">
                           <CardContent className="p-8">

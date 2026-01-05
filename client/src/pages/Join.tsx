@@ -3,6 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+const address = "20 Dundas St W Suite 921, Toronto, ON";
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
+  address
+)}&output=embed`;
+
 const contactMethods = [
   {
     icon: "📷",
@@ -36,6 +41,7 @@ const sponsors = [
   { name: "Sponsor 9", image: "/figmaAssets/Sponsor_9.png" },
   { name: "Sponsor 10", image: "/figmaAssets/Sponsor_10.png" },
   { name: "Sponsor 11", image: "/figmaAssets/Sponsor_11.png" },
+  { name: "Sponsor 12", image: "/figmaAssets/Sponsor_12.png" },
 ];
 
 export const Join = () => {
@@ -76,11 +82,18 @@ export const Join = () => {
         </div>
 
         <div className="bg-neutral-50 rounded-[20px] p-8 max-w-[1361px] mx-auto mb-8">
-          <div className="h-[425px] rounded-[20px] bg-gray-200 flex items-center justify-center mb-4">
-            <p className="text-gray-500 text-[16px]">
-              Map placeholder - 20 Dundas St W Suite 921, Toronto, ON
-            </p>
+          <div className="h-[425px] rounded-[20px] overflow-hidden mb-4">
+            <iframe
+              title="TASC Location Map"
+              src={mapSrc}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
+
           <div className="flex items-center gap-4">
             <Card className="w-[105px] h-[105px] rounded-[150px] bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center">
               <CardContent className="p-0">
@@ -114,12 +127,18 @@ export const Join = () => {
               operations, or project management, there is a place for you on the
               team.
             </p>
-            <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[16px] text-white">
-              Apply Now
-            </Button>
+            <a href="https://linktr.ee/TASC_TMU?utm_source=linktree_profile_share&ltsid=a3b1dac8-9f24-474d-b0f9-b974b3d522b2">
+              <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[16px] text-white">
+                Apply Now
+              </Button>
+            </a>
           </div>
           <div className="w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
-            <img src="/figmaAssets/Join Our Team.png" alt="Team photo" className="w-full h-full object-cover" />
+            <img
+              src="/figmaAssets/Join Our Team.png"
+              alt="Team photo"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -141,9 +160,11 @@ export const Join = () => {
           pipeline.
         </p>
         <div className="text-center mb-16">
-          <Button className="h-[51px] px-8 bg-[#ff9800] hover:bg-[#ff9800]/90 rounded-[20px] font-normal [font-family:'BeVietnam'] text-[20px] text-black">
-            Sponsorship Package
-          </Button>
+          <a href="https://drive.google.com/file/d/1SiBIiehzm1kNSmO35LfurmNbcmCTyEFh/view">
+            <Button className="h-[51px] px-8 bg-[#ff9800] hover:bg-[#ff9800]/90 rounded-[20px] font-normal [font-family:'BeVietnam'] text-[20px] text-black">
+              Sponsorship Package
+            </Button>
+          </a>
         </div>
 
         <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-8">
@@ -161,7 +182,11 @@ export const Join = () => {
                 key={index}
                 className="w-[260px] h-[260px] mx-auto border-2 border-[#0a1f44] rounded-[20px] overflow-hidden bg-white"
               >
-                <img src={sponsor.image} alt={sponsor.name} className="w-full h-full object-contain p-4" />
+                <img
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  className="w-full h-full object-contain p-4"
+                />
               </div>
             ))}
           </div>
