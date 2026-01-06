@@ -221,3 +221,57 @@ body {
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+/* Custom cursor styles */
+.hide-default-cursor, .hide-default-cursor * {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 150ms ease;
+}
+
+.custom-cursor.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #111827;
+  border-radius: 9999px;
+  transform: translate3d(0, 0, 0);
+  transition: background 150ms ease;
+  margin-top: -4px;
+  margin-left: -4px;
+}
+
+.cursor-dot-image {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  transform: translate3d(0, 0, 0);
+  margin-top: -12px;
+  margin-left: -12px;
+  pointer-events: none;
+}
+
+.cursor-outline {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255,167,39,1);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.12s ease-out;
+  margin-top: -18px;
+  margin-left: -18px;
+}

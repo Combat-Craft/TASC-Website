@@ -96,8 +96,20 @@ export const Join = () => {
 
           <div className="flex items-center gap-4">
             <Card className="w-[105px] h-[105px] rounded-[150px] bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center">
-              <CardContent className="p-0">
-                <span className="text-3xl">📍</span>
+              <CardContent className="p-0 flex items-center justify-center">
+                <svg
+                  className="w-10 h-10"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                    fill="#FFFFFF"
+                  />
+                  <path d="M12 11.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="#0a1f44" />
+                </svg>
               </CardContent>
             </Card>
             <p className="[font-family:'Poppins'] font-bold text-[30px] text-black">
