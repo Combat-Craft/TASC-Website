@@ -10,7 +10,7 @@ import { Home } from "@/pages/Home";
 import { Projects } from "@/pages/Projects";
 import { Events } from "@/pages/Events";
 import { Team } from "@/pages/Team";
-import { Join } from "@/pages/Join";
+import { Sponsors } from "@/pages/Sponsors";
 import { Learnmore } from "@/pages/Learnmore";
 
 function Router() {
@@ -20,7 +20,7 @@ function Router() {
       <Route path="/projects" component={Projects} />
       <Route path="/events" component={Events} />
       <Route path="/team" component={Team} />
-      <Route path="/join" component={Join} />
+      <Route path="/sponsors" component={Sponsors} />
       <Route path="/Learnmore" component={Learnmore} />
       <Route component={NotFound} />
     </Switch>

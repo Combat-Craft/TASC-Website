@@ -6,12 +6,12 @@ export const Learnmore = () => {
     <div className="bg-white w-full">
       <Navigation />
 
-      <div className="mx-auto max-w-[1000px] px-6">
-        <h1 className="[font-family:'Poppins'] font-bold text-black text-[48px] tracking-[0] leading-[48px] mt-16 text-center">
+      <div className="mx-auto max-w-[1000px] px-4 sm:px-6 md:px-6">
+        <h1 className="[font-family:'Poppins'] font-bold text-black text-2xl sm:text-3xl md:text-[48px] tracking-[0] leading-tight md:leading-[48px] mt-8 md:mt-16 text-center">
           OUR STORY
         </h1>
 
-        <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mt-8 mb-12 text-center">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-sm sm:text-base md:text-[20px] tracking-[0] leading-relaxed md:leading-[30px] mt-6 md:mt-8 mb-8 md:mb-12 text-center">
         The Toronto Autonomous Systems Collective (TASC) is a student-run design
         and research team focused on robotics and autonomous systems. Founded at
         Toronto Metropolitan University under the Innovation Boost Zone, the

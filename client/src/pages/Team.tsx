@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const teamCaptains = [
   { name: "Ahmed Tabl", role: "Communications & Controls Lead", image: "/figmaAssets/Ahmed Tabl.png" },
@@ -127,6 +128,42 @@ export const Team = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage:
+            "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)",
+        }}
+      >
+        <div className="px-12 flex gap-12 items-start">
+          <div className="flex-1">
+            <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black mb-4">
+              JOIN OUR TEAM
+            </h2>
+            <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
+              TASC welcomes students from all disciplines who are eager to
+              learn, build, and push the boundaries of robotics and autonomous
+              systems. Whether you're interested in mechanical design, embedded
+              systems, software development, AI, manufacturing, business
+              operations, or project management, there is a place for you on the
+              team.
+            </p>
+            <a href="https://linktr.ee/TASC_TMU?utm_source=linktree_profile_share&ltsid=a3b1dac8-9f24-474d-b0f9-b974b3d522b2">
+              <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[16px] text-white">
+                Apply Now
+              </Button>
+            </a>
+          </div>
+          <div className="w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
+            <img
+              src="/figmaAssets/Join Our Team.png"
+              alt="Team photo"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 

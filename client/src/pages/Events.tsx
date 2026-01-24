@@ -40,15 +40,15 @@ export const Events = () => {
     <div className="bg-white w-full">
       <Navigation />
 
-      <section className="px-12 py-16">
-        <h1 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-8">
+      <section className="px-6 md:px-12 py-8 md:py-16">
+        <h1 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-8">
           UPCOMING EVENTS
         </h1>
 
         {upcomingEvents.length === 0 ? (
           <Card className="max-w-[1263px] mx-auto rounded-[20px] bg-neutral-50 border-0 shadow-sm">
             <CardContent className="py-12 text-center">
-                <p className="[font-family:'Poppins'] font-bold text-[30px] text-black">No Upcoming Events</p>
+                <p className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black">No Upcoming Events</p>
               </CardContent>
           </Card>
         ) : (
@@ -58,52 +58,61 @@ export const Events = () => {
         )}
       </section>
 
-      <section className="px-12 py-16">
-        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-8">
+      <section className="px-6 md:px-12 py-8 md:py-16">
+        <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-8">
           PAST EVENTS
         </h2>
 
         <div className="space-y-8 max-w-[1263px] mx-auto">
           {pastEvents.map((event, index) => (
-            <Card key={index} className="rounded-[20px] bg-neutral-50 border-0 shadow-sm overflow-hidden">
-              <CardContent className="p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-[90px] h-[90px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center overflow-hidden">
-                      <img src={event.logo} alt={event.name} className="w-full h-full object-contain p-2" />
+            <div key={index} className="flex flex-col gap-4">
+              <Card className="w-full h-[40px] rounded-xl bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center md:hidden">
+                <CardContent className="p-0">
+                  <p className="[font-family:'Poppins'] font-bold text-white text-[16px] text-center">
+                    {event.dates}
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="rounded-[20px] bg-neutral-50 border-0 shadow-sm overflow-hidden">
+                <CardContent className="p-4 md:p-8">
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-[60px] h-[60px] md:w-[90px] md:h-[90px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex items-center justify-center overflow-hidden">
+                        <img src={event.logo} alt={event.name} className="w-full h-full object-contain p-2" />
+                      </div>
+                      <h3 className="[font-family:'Poppins'] text-black font-bold text-[28px] md:text-[48px]">{event.name}</h3>
                     </div>
-                    <h3 className="[font-family:'Poppins'] text-black font-bold text-[48px]">{event.name}</h3>
+                    <Card className="hidden md:flex w-[200px] md:w-[400px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-lg items-center justify-center">
+                      <CardContent className="p-0">
+                        <p className="[font-family:'Poppins'] font-bold text-white text-[20px] text-center">
+                          {event.dates}
+                        </p>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <Card className="w-[400px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center">
-                    <CardContent className="p-0">
-                      <p className="[font-family:'Poppins'] font-bold text-white text-[20px] text-center">
-                        {event.dates}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
 
-                <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-4">
-                  {event.description}
-                </p>
+                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] mb-4 text-center md:text-left">
+                    {event.description}
+                  </p>
 
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-[20px] leading-[30px]">📍</span>
-                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px]">{event.location}</p>
-                </div>
+                  <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                    <span className="text-[16px] md:text-[20px] leading-[24px] md:leading-[30px]">📍</span>
+                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px]">{event.location}</p>
+                  </div>
 
-                <div className="flex gap-4 overflow-x-auto pb-4">
-                  {event.images.map((image, imgIndex) => (
-                    <div
-                      key={imgIndex}
-                      className="w-[260px] h-[260px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex-shrink-0 overflow-hidden"
-                    >
-                      <img src={image} alt={`${event.name} ${imgIndex + 1}`} className="w-full h-full object-cover" />
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="flex gap-4 overflow-x-auto pb-4">
+                    {event.images.map((image, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] bg-white border-2 border-[#0a1f44] rounded-[20px] flex-shrink-0 overflow-hidden"
+                      >
+                        <img src={image} alt={`${event.name} ${imgIndex + 1}`} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </section>

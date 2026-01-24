@@ -36,22 +36,24 @@ export const Projects = () => {
     <div className="bg-white w-full">
       <Navigation />
 
-      <section className="px-12 py-16">
+      <section className="px-6 md:px-12 py-8 md:py-16">
         {projects.map((project, index) => (
-          <div key={index} className="mb-24">
-            <Card className="w-[289px] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center mb-6">
-              <CardContent className="p-0 flex items-center justify-center">
-                <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center">
-                  {project.year}
-                </p>
-              </CardContent>
-            </Card>
+          <div key={index} className="mb-16 md:mb-24">
+            <div className="flex justify-start mb-6">
+              <Card className="w-[200px] md:w-[289px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
+                <CardContent className="p-0 flex items-center justify-center">
+                  <p className="[font-family:'Poppins'] font-bold text-white text-[20px] md:text-[30px] text-center">
+                    {project.year}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
 
-            <div className="bg-neutral-50 rounded-[20px] p-8 flex gap-8">
+            <div className="bg-neutral-50 rounded-[20px] p-4 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8">
               {/* Left column: Image */}
-              <div className="flex-shrink-0">
-                <div className="rounded-[20px] w-[450px] h-[450px] overflow-hidden">
-                  <img 
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <div className="rounded-[20px] w-full md:w-[450px] h-[250px] md:h-[450px] overflow-hidden">
+                  <img
                     src={project.image}
                     alt={project.name}
                     className="w-full h-full object-contain"
@@ -61,18 +63,18 @@ export const Projects = () => {
 
               {/* Right column: Description and Features */}
               <div className="flex-1">
-                <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black mb-4">{project.name}</h2>
-                <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
+                <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[48px] text-black mb-4 text-center md:text-left">{project.name}</h2>
+                <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] mb-6 md:mb-8 text-center md:text-left">
                   {project.description}
                 </p>
 
-                <div className="mt-8">
-                  <h3 className="[font-family:'Poppins'] text-black font-bold text-[30px] mb-6">Key Features</h3>
-                  <ul className="space-y-4">
+                <div className="mt-6 md:mt-8">
+                  <h3 className="[font-family:'Poppins'] text-black font-bold text-[20px] md:text-[30px] mb-4 md:mb-6 text-center md:text-left">Key Features</h3>
+                  <ul className="space-y-3 md:space-y-4">
                     {project.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-center gap-4">
-                        <div className="w-3 h-3 bg-[#ff9800] rounded-full" />
-                        <span className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px]">{feature}</span>
+                      <li key={fIndex} className="flex items-center gap-3 md:gap-4 justify-center md:justify-start">
+                        <div className="w-2 h-2 md:w-3 md:h-3 bg-[#ff9800] rounded-full flex-shrink-0" />
+                        <span className="[font-family:'BeVietnam'] font-normal text-black text-[14px] md:text-[20px] tracking-[0] leading-[20px] md:leading-[30px]">{feature}</span>
                       </li>
                     ))}
                   </ul>
