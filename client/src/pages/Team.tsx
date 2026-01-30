@@ -59,14 +59,14 @@ const subteams = [
 ];
 
 const TeamMemberCard = ({ name, role, image }: { name: string; role: string; image: string }) => (
-  <Card className="w-[390px] rounded-[20px] bg-neutral-50 border-0">
+  <Card className="w-full md:w-[250px] rounded-[20px] bg-neutral-50 border-0">
     <CardContent className="p-6 text-center">
-      <div className="w-[258px] h-[258px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center overflow-hidden">
+      <div className="w-[200px] h-[200px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
       <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-        <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{name}</p>
-        <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{role}</p>
+        <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{name}</p>
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[14px] md:text-[15px] tracking-[0] leading-[30px]">{role}</p>
       </div>
     </CardContent>
   </Card>
@@ -77,27 +77,26 @@ export const Team = () => {
     <div className="bg-white w-full">
       <Navigation />
 
-      <section className="px-12 py-16">
-        <h1 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-4">
+      <section className="px-6 md:px-12 py-8 md:py-16">
+        <h1 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-4">
           OUR TEAM
         </h1>
 
-        <div className="relative rounded-[20px] py-16 px-12 mb-16" style={{
+        <div className="w-full md:w-[1140px] rounded-[20px] pt-8 pb-16 px-6 md:px-12 mb-16 mx-auto" style={{
           backgroundImage: "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)"
         }}>
-          <h2 className="[font-family:'Poppins'] font-bold text-[30px] text-black text-center mb-8">
+          <h2 className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black text-center mb-8">
             Team Captains
           </h2>
-          <div className="flex justify-center gap-16">
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
             {teamCaptains.map((captain, index) => (
-              <Card key={index} className="w-[470px] rounded-[20px] bg-neutral-50 border-0">
-                <CardContent className="p-8 text-center">
-                  <div className="w-[317px] h-[317px] mx-auto mb-4 bg-gray-200 border-2 border-[#0a1f44] rounded-full flex items-center justify-center overflow-hidden">
+              <Card key={index} className="w-full md:w-[470px] rounded-[20px] bg-neutral-50 border-0">
+                <CardContent className="p-6 md:p-8 text-center">
+                  <div className="w-[250px] md:w-[317px] h-[250px] md:h-[317px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
                     <img src={captain.image} alt={captain.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-                    <p className="[font-family:'BeVietnam'] font-bold text-black text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
-                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
+                    <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -105,23 +104,23 @@ export const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
           {teamLeads.map((member, index) => (
             <TeamMemberCard key={index} name={member.name} role={member.role} image={member.image} />
           ))}
         </div>
 
-        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-12">
+        <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-12">
           OUR SUBTEAMS
         </h2>
 
         <div className="space-y-8 max-w-[1123px] mx-auto">
           {subteams.map((subteam, index) => (
             <Card key={index} className="rounded-[20px] bg-neutral-50 border-0">
-              <CardContent className="p-8">
-                <h3 className="[font-family:'Poppins'] font-bold text-[30px] text-black mb-6">{subteam.name}</h3>
-                <div className="bg-[#ff9800] rounded-[20px] p-8">
-                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px]">
+              <CardContent className="p-6 md:p-8">
+                <h3 className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black mb-6">{subteam.name}</h3>
+                <div className="bg-[#ff9800] rounded-[20px] p-6 md:p-8">
+                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px]">
                     {subteam.description}
                   </p>
                 </div>
@@ -132,18 +131,25 @@ export const Team = () => {
       </section>
 
       <section
-        className="relative py-24"
+        className="relative py-8 md:py-24"
         style={{
           backgroundImage:
             "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)",
         }}
       >
-        <div className="px-12 flex gap-12 items-start">
+        <div className="px-6 md:px-12 flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
           <div className="flex-1">
-            <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black mb-4">
+            <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center md:text-left mb-4">
               JOIN OUR TEAM
             </h2>
-            <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
+            <div className="md:hidden w-full h-[300px] rounded-[20px] overflow-hidden flex items-center justify-center mb-8">
+              <img
+                src="/figmaAssets/Join Our Team.png"
+                alt="Team photo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] text-center md:text-left mb-8">
               TASC welcomes students from all disciplines who are eager to
               learn, build, and push the boundaries of robotics and autonomous
               systems. Whether you're interested in mechanical design, embedded
@@ -151,13 +157,15 @@ export const Team = () => {
               operations, or project management, there is a place for you on the
               team.
             </p>
-            <a href="https://linktr.ee/TASC_TMU?utm_source=linktree_profile_share&ltsid=a3b1dac8-9f24-474d-b0f9-b974b3d522b2">
-              <Button className="h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[16px] text-white">
-                Apply Now
-              </Button>
-            </a>
+            <div className="flex justify-center md:justify-start">
+              <a href="https://linktr.ee/TASC_TMU?utm_source=linktree_profile_share&ltsid=a3b1dac8-9f24-474d-b0f9-b974b3d522b2">
+                <Button className="h-[45px] md:h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[14px] md:text-[16px] text-white">
+                  Apply Now
+                </Button>
+              </a>
+            </div>
           </div>
-          <div className="w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
+          <div className="hidden md:block w-[709px] h-[525px] rounded-[20px] overflow-hidden flex items-center justify-center">
             <img
               src="/figmaAssets/Join Our Team.png"
               alt="Team photo"

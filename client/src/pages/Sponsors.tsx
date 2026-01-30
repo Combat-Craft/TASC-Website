@@ -22,11 +22,11 @@ export const Sponsors = () => {
     <div className="bg-white w-full">
       <Navigation />
 
-      <section className="px-12 py-24">
-        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-4">
+      <section className="px-6 md:px-12 py-8 md:py-24">
+        <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-4">
           BECOME A SPONSOR
         </h2>
-        <p className="[font-family:'BeVietnam'] font-normal text-black text-[20px] tracking-[0] leading-[30px] mb-8">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[30px] mb-8">
           TASC partners with organizations that share a passion for innovation,
           education, and the advancement of robotics. Sponsorship directly
           supports the development of our autonomous systems projects—providing
@@ -46,7 +46,7 @@ export const Sponsors = () => {
           </a>
         </div>
 
-        <h2 className="[font-family:'Poppins'] font-bold text-[48px] text-black text-center mb-8">
+        <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-8">
           OUR CURRENT SPONSORS
         </h2>
         <p className="[font-family:'BeVietnam'] font-normal text-black text-center text-[20px] tracking-[0] leading-[30px] mb-8">
@@ -54,8 +54,8 @@ export const Sponsors = () => {
           TASC is directly reflected in our continuous progress.
         </p>
 
-        <div className="bg-neutral-50 rounded-[20px] p-12 max-w-[1361px] mx-auto">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="bg-neutral-50 rounded-[20px] p-4 md:p-12 max-w-[1361px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}

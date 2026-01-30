@@ -6,9 +6,7 @@ import { Link } from "wouter";
 
 const statsData = [
   { value: "80+ Active Members" },
-  { value: "11+ Current Sponsors" },
-  { value: "2+ Project Created" },
-  { value: "2+ Competition Participated" },
+  { value: "12+ Current Sponsors" },
 ];
 
 const timelineEvents = [
@@ -133,14 +131,14 @@ export const Home = (): JSX.Element => {
       <section className="relative py-8">
         <div className="absolute top-0 left-0 w-max h-[361px] rounded-[20px]" />
         <div className="relative flex justify-center bg-neutral-50 p-6 md:p-8 mx-6 md:mx-8 rounded-[20px]">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 w-full">
+          <div className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-8 w-full">
             {statsData.map((stat, index) => (
               <Card
                 key={index}
-                className="w-full md:w-[290px] h-[290px] rounded-full bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center mx-auto md:mx-0"
+                className="w-full md:w-[600px] md:h-[250px] h-[290px] rounded-full bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center mx-auto"
               >
                 <CardContent className="p-0 flex items-center justify-center">
-                  <p className="w-[252px] font-bold text-white text-[28px] md:text-[30px] text-center leading-[48px] tracking-[0] [font-family:'Poppins']">
+                  <p className="w-[252px] md:w-[350px] font-bold text-white text-[28px] md:text-[30px] text-center leading-[48px] tracking-[0] [font-family:'Poppins']">
                     {stat.value}
                   </p>
                 </CardContent>
