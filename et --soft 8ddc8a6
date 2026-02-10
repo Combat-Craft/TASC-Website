@@ -1,0 +1,18 @@
+[33mb171fbc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update package.json
+[33mf3e7393[m Update netlify.toml
+[33mdf5e077[m Create netlify.toml
+[33m8ddc8a6[m Implemented mobile layout for Team, Sponsors page. Updated Stats Cards on Home page.
+[33m49cbae0[m Create README.md
+[33m38668cb[m Delete TODO.md
+[33m57d7810[m Implemented mobile layout for Home, Projects, and Events pages. Replaced Join & Connect page with Sponsors page
+[33m6963753[m Updated fonts for learn more page and added a custom cursor
+[33m41291af[m links and learn more
+[33m6410694[m Merge branch 'main' of https://github.com/alitcs/TASC
+[33m3f3a39f[m Updated Join Page
+[33m7bcfe45[m Added fonts, Removed filter options, Fixed UI
+[33m514a09d[m Added Images and Updated UI
+[33mc6c2319[m formatting fixed
+[33m9ed58db[m initial commit
+[33m44f33cd[m Update project documentation with detailed architecture and dependencies
+[33m70e1b8e[m Add new pages for events, team, projects, and join
+[33ma0a2dee[m Initial commit

@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className="flex flex-col gap-8">
             {/* Logo and Title */}
             <div className="flex items-center gap-4 flex-col text-center">
-              <div className="w-fit bg-[#ff9800] rounded-lg p-2 flex-shrink-0">
+              <div className="w-fit bg-[#ffffff] rounded-lg p-2 flex-shrink-0">
                 <img
                   className="w-[72px] h-[57px]"
                   alt="TASC Logo"
@@ -196,7 +196,7 @@ export const Footer = () => {
             <div className="w-1/2 flex flex-col">
               {/* Logo and Organization Info */}
               <div className="flex items-center gap-4">
-                <div className="w-fit bg-[#ff9800] rounded-lg p-2 flex-shrink-0">
+                <div className="w-fit bg-[#ffffff] rounded-lg p-2 flex-shrink-0">
                   <img
                     className="w-[72px] h-[57px]"
                     alt="TASC Logo"

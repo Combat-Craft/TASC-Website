@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "wouter";
+import { ChevronRight } from "lucide-react";
 
 const statsData = [
   { value: "80+ Active Members" },
@@ -90,7 +91,7 @@ export const Home = (): JSX.Element => {
               <img
                 className="w-full h-full object-cover rounded-[20px]"
                 alt="Image"
-                src="/figmaAssets/image-17.png"
+                src="/figmaAssets/image-17.jpg"
               />
             </div>
 
@@ -154,64 +155,104 @@ export const Home = (): JSX.Element => {
             OUR JOURNEY
           </h2>
 
-          <div className="relative">
-            <div className="absolute left-0 md:left-1/2 top-0 w-1.5 h-full bg-[#0a1f44] md:-translate-x-1/2" />
+          {/* MOBILE: Vertical Timeline */}
+          <div className="md:hidden relative">
+            <div className="relative">
+              {/* Start indicator - horizontal line */}
+              <div className="absolute left-0 top-0 h-1.5 w-8 bg-[#0a1f44]" style={{ zIndex: 2, transform: 'translateX(-40%) translateY(-3px)' }} />
+              
+              {/* Main line */}
+              <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0a1f44]" />
 
-            <div className="space-y-32">
-              {timelineEvents.map((event, index) => (
-                <div key={index} className="relative min-h-[220px]">
-                  <div className="absolute left-0 md:left-1/2 top-[18px] w-[30px] h-[30px] bg-[#0a1f44] rounded-[15px] md:-translate-x-1/2 -translate-x-[11px]" />
+              <div className="space-y-32">
+                {timelineEvents.map((event, index) => (
+                  <div key={index} className="relative min-h-[220px]">
+                    <div className="absolute left-0 top-[18px] w-[30px] h-[30px] bg-[#0a1f44] rounded-[15px] -translate-x-[11px]" />
 
-                  {/* Mobile: Always on right, Desktop: Alternate left/right */}
-                  {event.side === "right" ? (
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-end md:gap-16">
-                      <div className="hidden md:block md:w-1/2" />
-                      <div className="w-full md:w-1/2 flex flex-col items-start gap-6 ml-16 md:ml-0">
-                        <Card className="w-[80%] md:w-[289px] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
-                          <CardContent className="p-0 flex items-center justify-center">
-                            <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
-                              {event.year}
-                            </p>
-                          </CardContent>
-                        </Card>
-                        <Card className="w-[80%] md:w-[504px] rounded-[20px] border-4 border-[#0a1f44] bg-white">
-                          <CardContent className="p-6 md:p-8">
-                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[24px] md:text-[30px] text-center tracking-[0] leading-[30px] mb-4">
+                    <div className="w-full flex flex-col items-start gap-6 ml-16">
+                      <Card className="w-[80%] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
+                        <CardContent className="p-0 flex items-center justify-center">
+                          <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
+                            {event.year}
+                          </p>
+                        </CardContent>
+                      </Card>
+                      <Link href="/Events">
+                        <Card className="w-[80%] rounded-[20px] border-4 border-[#0a1f44] bg-white relative cursor-pointer hover:shadow-lg transition-shadow">
+                          <CardContent className="p-6">
+                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[24px] text-center tracking-[0] leading-[30px] mb-4">
                               {event.title}
                             </h3>
-                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[30px] mb-8">
+                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[16px] tracking-[0] leading-[30px] mb-8">
                               {event.description}
                             </p>
+                            {index !== 0 && (
+                              <div className="absolute bottom-4 right-4">
+                                <ChevronRight className="w-6 h-6 text-[#0a1f44]" />
+                              </div>
+                            )}
                           </CardContent>
                         </Card>
-                      </div>
+                      </Link>
                     </div>
-                  ) : (
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-start md:gap-16">
-                      <div className="w-full md:w-1/2 flex flex-col md:items-end items-start gap-6 ml-16 md:ml-0">
-                        <Card className="w-[80%] md:w-[289px] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
-                          <CardContent className="p-0 flex items-center justify-center">
-                            <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
-                              {event.year}
-                            </p>
-                          </CardContent>
-                        </Card>
-                        <Card className="w-[80%] md:w-[504px] rounded-[20px] border-4 border-[#0a1f44] bg-white">
-                          <CardContent className="p-6 md:p-8">
-                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[24px] md:text-[30px] text-center tracking-[0] leading-[30px] mb-4">
+                  </div>
+                ))}
+              </div>
+              
+              {/* End indicator - horizontal line */}
+              <div className="absolute left-0 bottom-0 h-1.5 w-8 bg-[#0a1f44]" style={{ zIndex: 2, transform: 'translateX(-40%) translateY(3px)' }} />
+            </div>
+          </div>
+
+          {/* DESKTOP: Horizontal Scrollable Timeline */}
+          <div className="hidden md:block relative">
+            <div className="overflow-x-auto pb-8 pl-2">
+              <div className="relative inline-flex gap-8 min-w-max px-12">
+                {/* Start indicator - vertical line */}
+                <div className="absolute top-[12px] left-0 w-1.5 h-8 bg-[#0a1f44]" style={{ zIndex: 2, transform: 'translateX(-3px) translateY(10%)' }} />
+                
+                {/* Horizontal Line */}
+                <div className="absolute top-[28px] left-0 right-0 h-1.5 bg-[#0a1f44]" style={{ zIndex: 0 }} />
+
+                {/* Timeline Items */}
+                {timelineEvents.map((event, index) => (
+                  <div key={index} className="relative flex flex-col items-center flex-shrink-0 w-[480px]" style={{ zIndex: 1 }}>
+                    {/* Dot ON the line */}
+                    <div className="absolute top-[13px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] bg-[#0a1f44] rounded-full" style={{ zIndex: 2 }} />
+
+                    {/* Content Container */}
+                    <div className="flex flex-col items-center gap-4 w-full pt-20">
+                      <Card className="w-[289px] h-[70px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center flex-shrink-0">
+                        <CardContent className="p-0 flex items-center justify-center">
+                          <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
+                            {event.year}
+                          </p>
+                        </CardContent>
+                      </Card>
+                      <Link href="/Events">
+                        <Card className="w-[420px] h-[220px] rounded-[20px] border-4 border-[#0a1f44] bg-white flex flex-col flex-shrink-0 relative cursor-pointer hover:shadow-lg transition-shadow">
+                          <CardContent className="p-8 flex flex-col items-center justify-center h-full">
+                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[30px] text-center tracking-[0] leading-[30px] mb-4">
                               {event.title}
                             </h3>
-                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[30px] mb-8">
+                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[20px] tracking-[0] leading-[30px]">
                               {event.description}
                             </p>
+                            {index !== 0 && (
+                              <div className="absolute bottom-4 right-4">
+                                <ChevronRight className="w-6 h-6 text-[#0a1f44]" />
+                              </div>
+                            )}
                           </CardContent>
                         </Card>
-                      </div>
-                      <div className="hidden md:block md:w-1/2" />
+                      </Link>
                     </div>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+                
+                {/* End indicator - vertical line */}
+                <div className="absolute top-[12px] right-0 w-1.5 h-8 bg-[#0a1f44]" style={{ zIndex: 2, transform: 'translateX(3px) translateY(10%)' }} />
+              </div>
             </div>
           </div>
         </div>
