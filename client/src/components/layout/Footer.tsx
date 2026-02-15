@@ -67,7 +67,7 @@ export const Footer = () => {
                       </svg>
                     </CardContent>
                   </Card>
-                  <p className="[font-family:'Poppins'] font-bold text-[14px] md:text-[20px] text-white">
+                  <p className="[font-family:'Poppins'] font-bold text-[16px] md:text-[20px] text-white">
                     20 Dundas St W Suite 921, Toronto, ON
                   </p>
                 </div>

@@ -110,7 +110,7 @@ export const Team = () => {
         <div className="w-full md:w-[1140px] rounded-[20px] pt-8 pb-16 px-6 md:px-12 mb-16 mx-auto" style={{
           backgroundColor: "#ff9800"
         }}>
-          <h2 className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black text-center mb-8">
+          <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center mb-8">
             Team Captains
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
@@ -144,7 +144,7 @@ export const Team = () => {
             <Card key={index} className="rounded-[20px] bg-neutral-50 border-0 overflow-hidden">
               <CardContent className="p-0">
                 <div className="p-6 md:p-8">
-                  <h3 className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black text-center md:text-left mb-6">{subteam.name}</h3>
+                  <h3 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center md:text-left mb-6">{subteam.name}</h3>
                 </div>
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 px-6 md:px-8 pb-6 md:pb-8">
                   {/* Image - Square */}
@@ -154,7 +154,7 @@ export const Team = () => {
                   {/* Text */}
                   <div className="flex-1 flex flex-col justify-center h-full md:h-[350px]">
                     <div className="bg-[#ff9800] rounded-[20px] p-6 md:p-8 h-full flex flex-col justify-center">
-                      <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px]">
+                      <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] text-center md:text-left">
                         {subteam.description}
                       </p>
                     </div>
@@ -185,7 +185,7 @@ export const Team = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] text-center md:text-left mb-8">
+            <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] text-center md:text-left mb-8">
               TASC welcomes students from all disciplines who are eager to
               learn, build, and push the boundaries of robotics and autonomous
               systems. Whether you're interested in mechanical design, embedded
@@ -195,7 +195,7 @@ export const Team = () => {
             </p>
             <div className="flex justify-center md:justify-start">
               <a href="https://linktr.ee/TASC_TMU?utm_source=linktree_profile_share&ltsid=a3b1dac8-9f24-474d-b0f9-b974b3d522b2">
-                <Button className="h-[45px] md:h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[14px] md:text-[16px] text-white">
+                <Button className="h-[45px] md:h-[51px] px-8 bg-[#0a1f44] hover:bg-[#0a1f44]/90 rounded-[20px] text-[20px] md:text-[20px] text-white">
                   Apply Now
                 </Button>
               </a>

@@ -81,7 +81,7 @@ export const Home = (): JSX.Element => {
           <div className="flex flex-col md:flex-row md:items-start md:gap-16 gap-8">
             {/* Mobile heading - appears first on mobile */}
             <div className="flex flex-col md:hidden w-full">
-              <h2 className="[font-family:'Poppins'] font-bold text-black text-[32px] tracking-[0] leading-[48px] mb-0 text-center">
+              <h2 className="[font-family:'Poppins'] font-bold text-black text-[36px] tracking-[0] leading-[48px] mb-0 text-center">
                 OUR STORY
               </h2>
             </div>
@@ -100,11 +100,11 @@ export const Home = (): JSX.Element => {
               <h2 className="hidden md:block [font-family:'Poppins'] font-bold text-black text-[48px] tracking-[0] leading-[48px] mb-8">
                 OUR STORY
               </h2>
-              <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[30px] mb-8 text-center md:text-left">
+              <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px] mb-8 text-center md:text-left">
                 The Toronto Autonomous Systems Collective (TASC) is a
                 student-run design and research team focused on robotics and
                 autonomous systems. Founded at Toronto Metropolitan University
-                under the Innovation Boost Zone, the organisation is dedicated
+                under the Innovation Boost Zone (IBZ), the organisation is dedicated
                 to providing hands-on, experiential learning opportunities that
                 prepare students for an evolving technological landscape and for
                 careers in engineering, science, and related fields.
@@ -168,7 +168,7 @@ export const Home = (): JSX.Element => {
                     <div className="w-full flex flex-col items-start gap-6 ml-16">
                       <Card className="w-[80%] h-[68px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
                         <CardContent className="p-0 flex items-center justify-center">
-                          <p className="[font-family:'Poppins'] font-bold text-white text-[30px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
+                          <p className="[font-family:'Poppins'] font-bold text-white text-[28px] text-center tracking-[0] leading-[48px] whitespace-nowrap">
                             {event.year}
                           </p>
                         </CardContent>
@@ -176,10 +176,10 @@ export const Home = (): JSX.Element => {
                       <Link href="/Events">
                         <Card className="w-[80%] rounded-[20px] border-4 border-[#0a1f44] bg-white relative cursor-pointer hover:shadow-lg transition-shadow">
                           <CardContent className="p-6">
-                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[24px] text-center tracking-[0] leading-[30px] mb-4">
+                            <h3 className="[font-family:'BeVietnam'] font-normal text-black text-[28px] text-center tracking-[0] leading-[30px] mb-4">
                               {event.title}
                             </h3>
-                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[16px] tracking-[0] leading-[30px] mb-8">
+                            <p className="[font-family:'BeVietnam'] text-center font-normal text-black text-[18px] tracking-[0] leading-[30px] mb-8">
                               {event.description}
                             </p>
                             {index !== 0 && (

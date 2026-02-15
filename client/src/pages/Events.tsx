@@ -48,7 +48,7 @@ export const Events = () => {
         {upcomingEvents.length === 0 ? (
           <Card className="max-w-[1263px] mx-auto rounded-[20px] bg-neutral-50 border-0 shadow-sm">
             <CardContent className="py-12 text-center">
-                <p className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black">No Upcoming Events</p>
+                <p className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black">No Upcoming Events</p>
               </CardContent>
           </Card>
         ) : (
@@ -68,7 +68,7 @@ export const Events = () => {
             <div key={index} className="flex flex-col gap-4">
               <Card className="w-full h-[40px] rounded-xl bg-[#0a1f44] border-0 shadow-lg flex items-center justify-center md:hidden">
                 <CardContent className="p-0">
-                  <p className="[font-family:'Poppins'] font-bold text-white text-[16px] text-center">
+                  <p className="[font-family:'Poppins'] font-bold text-white text-[18px] md:text-[16px] text-center">
                     {event.dates}
                   </p>
                 </CardContent>
@@ -84,20 +84,34 @@ export const Events = () => {
                     </div>
                     <Card className="hidden md:flex w-[200px] md:w-[400px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-lg items-center justify-center">
                       <CardContent className="p-0">
-                        <p className="[font-family:'Poppins'] font-bold text-white text-[20px] text-center">
+                        <p className="[font-family:'Poppins'] font-bold text-white text-[18px] md:text-[20px] text-center">
                           {event.dates}
                         </p>
                       </CardContent>
                     </Card>
                   </div>
 
-                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] mb-4 text-center md:text-left">
+                  <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] mb-4 text-center md:text-left">
                     {event.description}
                   </p>
 
-                  <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
-                    <span className="text-[16px] md:text-[20px] leading-[24px] md:leading-[30px]">📍</span>
-                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px]">{event.location}</p>
+                  <div className="flex mb-4 justify-center md:justify-start">
+                    <div className="inline-flex items-center gap-2">
+                      <svg
+                        className="w-6 h-6 flex-shrink-0"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                          fill="#0a1f44"
+                        />
+                        <path d="M12 11.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" fill="#e5e5e5" />
+                      </svg>
+                      <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px]">{event.location}</p>
+                    </div>
                   </div>
 
                   <div className="flex gap-4 overflow-x-auto pb-4">

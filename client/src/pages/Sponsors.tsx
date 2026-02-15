@@ -26,10 +26,10 @@ export const Sponsors = () => {
         <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-4">
           BECOME A SPONSOR
         </h2>
-        <p className="[font-family:'BeVietnam'] font-normal text-black text-[16px] md:text-[20px] tracking-[0] leading-[30px] mb-8">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px] mb-8 text-center">
           TASC partners with organizations that share a passion for innovation,
           education, and the advancement of robotics. Sponsorship directly
-          supports the development of our autonomous systems projects—providing
+          supports the development of our autonomous systems projects, providing
           materials, tooling, competition travel funds, and access to industry
           expertise that help our students design and build at the highest
           level. In return, sponsors receive a wide range of benefits, including
@@ -49,7 +49,7 @@ export const Sponsors = () => {
         <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-8">
           OUR CURRENT SPONSORS
         </h2>
-        <p className="[font-family:'BeVietnam'] font-normal text-black text-center text-[20px] tracking-[0] leading-[30px] mb-8">
+        <p className="[font-family:'BeVietnam'] font-normal text-black text-center text-[18px] md:text-[20px] tracking-[0] leading-[30px] mb-8">
           We would like to thank our sponsors for supporting us. Their impact on
           TASC is directly reflected in our continuous progress.
         </p>
