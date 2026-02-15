@@ -120,12 +120,12 @@ export const Footer = () => {
                 <h4 className="[font-family:'Poppins'] font-bold text-white text-[18px] md:text-[20px] tracking-[0]">
                   Connect
                 </h4>
-                <div className="flex flex-col gap-2 mt-2 items-center">
+                <div className="flex flex-row gap-4 mt-2 items-center justify-center">
                   <a
                     href="mailto:tmutasc@gmail.com"
                     className="hover:text-[#ff9800] transition-colors [font-family:'BeVietnam'] text-white text-[14px] md:text-[15px] tracking-[0] flex items-center gap-2"
                   >
-                    <img src="/figmaAssets/Gmail_Logo_512px.png" alt="Email" className="w-5 h-4" />
+                    <img src="/figmaAssets/Gmail_Logo_512px.png" alt="Email" className="w-5 h-5" />
                     Email
                   </a>
                   <a

@@ -9,10 +9,6 @@ const teamCaptains = [
 ];
 
 const teamLeads = [
-  // ===== FOUNDER / LEADERSHIP =====
-  { name: "Harjeev Kohli", role: "Founder — Business Development Lead", image: "/figmaAssets/Harjeev Kohli.jpg" },
-
-  // ===== LEADS =====
   { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
   { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png" },
   { name: "Muntasir Munir", role: "Autonomous Navigation Lead", image: "/figmaAssets/Muntasir Munir.png" },
@@ -23,14 +19,11 @@ const teamLeads = [
   { name: "Ahmad Zaki Momand", role: "Arm Dynamics Lead", image: "/figmaAssets/Ahmad Zaki Momand.png" },
   { name: "Ikkena Agusiegbe", role: "Scientific Analysis Lead", image: "/figmaAssets/Ikkena Agusiegbe.png" },
   { name: "Christian Turjuman", role: "Power & Energy Systems", image: "/figmaAssets/Christian Turjuman.png" },
-
-  // ===== ADVISORS =====
+  { name: "Harjeev Kohli", role: "Founder — Business Development Lead", image: "/figmaAssets/Harjeev Kohli.jpg" },
   { name: "Umar Shabbir", role: "Advisor — Aerospace Engineering", image: "/figmaAssets/Umar Shabbir.png" },
   { name: "Tabitha Grant", role: "Advisor — Engineering Innovation & Entrepreneurship", image: "/figmaAssets/Tabitha Grant.png" },
   { name: "Antonia Hoffman", role: "Advisor — Aerospace Engineering PhD Candidate", image: "/figmaAssets/Antonia Hoffman.png" },
-
-  // ===== IBZ =====
-  { name: "Ashu Syal", role: "Advisor - Director, Innovation Boost Zone (IBZ)", image: "/figmaAssets/Ashu Syal.png" },
+  { name: "Ashu Syal", role: "Advisor — Director, Innovation Boost Zone (IBZ)", image: "/figmaAssets/Ashu Syal.png" },
 ];
 
 const subteams = [
@@ -57,7 +50,7 @@ const subteams = [
   {
     name: "Business Development",
     description: "We manage the team's finances and sponsorships, ensuring that our members have the funds and resources available to undertake ambitious projects. We are also responsible for marketing, driving more attention to our projects through our website, LinkedIn and Instagram as higher visibility leads to more opportunities for members and sponsors alike.",
-    image: "/figmaAssets/image-9.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350'%3E%3Crect fill='%23e5e5e5' width='350' height='350'/%3E%3C/svg%3E",
   },
   {
     name: "Scientific Analysis",
@@ -115,7 +108,7 @@ export const Team = () => {
         </h1>
 
         <div className="w-full md:w-[1140px] rounded-[20px] pt-8 pb-16 px-6 md:px-12 mb-16 mx-auto" style={{
-          backgroundImage: "linear-gradient(126deg, rgba(255, 152, 0, 1) 2%, rgba(255, 167, 39, 1) 60%, rgba(255, 183, 77, 1) 117%)"
+          backgroundColor: "#ff9800"
         }}>
           <h2 className="[font-family:'Poppins'] font-bold text-[24px] md:text-[30px] text-black text-center mb-8">
             Team Captains

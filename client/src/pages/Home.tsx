@@ -43,7 +43,7 @@ const timelineEvents = [
 
 export const Home = (): JSX.Element => {
   return (
-    <div className="bg-white w-full relative">
+    <div className="bg-white w-full relative overflow-x-hidden md:overflow-visible">
       <Navigation />
 
       <section className="relative px-6 md:px-12 pb-8 md:py-16 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
@@ -76,12 +76,12 @@ export const Home = (): JSX.Element => {
         />
       </section>
 
-      <section className="relative bg-[linear-gradient(135deg,rgba(255,152,0,1)_0%,rgba(255,167,39,1)_50%,rgba(255,183,77,1)_100%)] overflow-hidden">
-        <div className="relative px-6 md:px-12 py-16 md:py-32 md:min-h-[600px]">
+      <section className="relative bg-[#ff9800] overflow-hidden">
+        <div className="relative px-6 md:px-12 pt-8 pb-16 md:py-20">
           <div className="flex flex-col md:flex-row md:items-start md:gap-16 gap-8">
             {/* Mobile heading - appears first on mobile */}
             <div className="flex flex-col md:hidden w-full">
-              <h2 className="[font-family:'Poppins'] font-bold text-black text-[32px] tracking-[0] leading-[48px] mb-8 text-center">
+              <h2 className="[font-family:'Poppins'] font-bold text-black text-[32px] tracking-[0] leading-[48px] mb-0 text-center">
                 OUR STORY
               </h2>
             </div>
@@ -109,13 +109,9 @@ export const Home = (): JSX.Element => {
                 prepare students for an evolving technological landscape and for
                 careers in engineering, science, and related fields.
                 <br />
-                TASC began as a combat-robotics team with the goal of competing
-                in events such as BotBrawl Ontario. The team entered its first
-                competition at the CNE BotBrawl in September 2024, earning the
-                title of Best Rookie. Following this success, TASC reassessed
-                its long-term ambition and identified a desire to pursue more
-                complex and impactful engineering challenges. This led to a
-                strategic pivot from battlebots to planetary rover development.
+                TASC began as a combat robotics team, earning Best Rookie at CNE 
+                BotBrawl 2024 before making a strategic pivot to planetary rover 
+                development to pursue more complex engineering challenges.
               </p>
               <div className="flex justify-center md:justify-start w-full">
                 <Link href="/Learnmore">
@@ -131,7 +127,7 @@ export const Home = (): JSX.Element => {
 
       <section className="relative py-8">
         <div className="absolute top-0 left-0 w-max h-[361px] rounded-[20px]" />
-        <div className="relative flex justify-center bg-neutral-50 p-6 md:p-8 mx-6 md:mx-8 rounded-[20px]">
+        <div className="relative flex justify-center bg-neutral-50 p-6  md:mt-12 md:p-8 mx-6 md:mx-8 rounded-[20px]">
           <div className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-8 w-full">
             {statsData.map((stat, index) => (
               <Card
@@ -149,7 +145,7 @@ export const Home = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="relative px-6 md:px-12 py-24">
+      <section className="relative px-6 md:px-12 py-12">
         <div className="mx-auto">
           <h2 className="text-black text-center [font-family:'Poppins'] font-bold text-[36px] md:text-[48px] tracking-[0] leading-[48px] mb-24">
             OUR JOURNEY

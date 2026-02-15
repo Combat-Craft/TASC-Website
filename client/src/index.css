@@ -246,7 +246,7 @@ body {
   position: fixed;
   width: 8px;
   height: 8px;
-  background: #111827;
+  background: #0a1f44;
   border-radius: 9999px;
   transform: translate3d(0, 0, 0);
   transition: background 150ms ease;
@@ -269,7 +269,7 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 9999px;
-  border: 2px solid rgba(255,167,39,1);
+  border: 2px solid #0a1f44;
   transform: translate3d(0, 0, 0);
   transition: transform 0.12s ease-out;
   margin-top: -18px;

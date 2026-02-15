@@ -46,9 +46,9 @@ export const Navigation = () => {
                     key={index}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`[font-family:'Poppins'] block px-4 py-3 font-normal text-black text-[16px] tracking-[0] leading-[normal] hover:bg-gray-100 rounded-lg transition-colors ${
-                      isActive ? "border-l-4 border-[#ff9800] bg-orange-50" : ""
-                    }`}
+                    className={`[font-family:'Poppins'] block px-4 py-2 font-normal text-black text-[14px] tracking-[0] leading-[normal] hover:bg-gray-100 rounded-lg transition-colors ${
+                        isActive ? "border-2 border-[#ff9800] rounded-[50px]" : ""
+                      }`}
                   >
                     {item.label}
                   </Link>
