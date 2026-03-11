@@ -1,8 +1,23 @@
+
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
+  {
+    year: "2026",
+    upcoming: true,
+    name: "Isaac Rover",
+    description: "Our first rover, for CIRC 2025. Asimov was developed to have a 6 wheel rocker bogie suspension, later optimised for a 4 wheel steering. Powered by a LiFePo4 battery, Asimov is controlled by Jetson Orin Nano. The rover also has a 6 DoF arm that is capable of grabbing, holding and carrying up to 7 kilograms. The rover has 2 normal cameras and one infrared camera. Asimov is capable of scanning and translating Russian and Chinese texts as well as deciphering Aruco codes, and the infrared camera allows for navigation at night.",
+    features: [
+      "4 Wheel steering",
+      "6-DoF arm",
+      "LiFePo4 battery",
+      "Jetson Orin Nano",
+      "Normal + infrared cameras",
+    ],
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350'%3E%3Crect fill='%23e5e5e5' width='350' height='350'/%3E%3C/svg%3E",
+  },
   {
     year: "2025",
     name: "Asimov Rover",
@@ -31,13 +46,49 @@ const projects = [
   },
 ];
 
+// Get the upcoming project (Isaac)
+const upcomingProject = projects.find(p => p.upcoming);
+// Get the other projects
+const pastProjects = projects.filter(p => !p.upcoming);
+
 export const Projects = () => {
   return (
     <div className="bg-white w-full">
       <Navigation />
 
+      {/* Upcoming Project Section */}
+      {upcomingProject && (
+        <section className="px-6 md:px-12 py-8 md:py-16">
+          <div className="mb-0 md:mb-0">
+            <div className="flex justify-start mb-6">
+              <Card className="w-[150px] md:w-[289px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
+                <CardContent className="p-0 flex items-center justify-center">
+                  <p className="[font-family:'Poppins'] font-bold text-white text-[28px] md:text-[30px] text-center">
+                    {upcomingProject.year}
+                  </p>
+                </CardContent> 
+              </Card>
+              <Card className="w-[250px] ml-5 md:w-[350px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
+                <CardContent className="p-0 flex items-center justify-center">
+                  <p className="[font-family:'Poppins'] font-bold text-white text-[28px] md:text-[30px] text-center">
+                    In Progress
+                  </p>
+                </CardContent> 
+              </Card>
+            </div>
+
+            <div className="bg-neutral-50 rounded-[20px] p-4 md:p-8">
+              <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[48px] text-black mb-4 text-center md:text-left">
+                {upcomingProject.name}
+              </h2>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Past Projects Section */}
       <section className="px-6 md:px-12 py-8 md:py-16">
-        {projects.map((project, index) => (
+        {pastProjects.map((project, index) => (
           <div key={index} className="mb-16 md:mb-24">
             <div className="flex justify-start mb-6">
               <Card className="w-[200px] md:w-[289px] h-[50px] rounded-xl bg-[#0a1f44] border-0 shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] flex items-center justify-center">
@@ -89,3 +140,4 @@ export const Projects = () => {
     </div>
   );
 };
+

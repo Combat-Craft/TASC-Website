@@ -107,7 +107,7 @@ export const Team = () => {
           OUR TEAM
         </h1>
 
-        <div className="w-full md:w-[1140px] rounded-[20px] pt-8 pb-16 px-6 md:px-12 mb-16 mx-auto" style={{
+        <div className="w-full md:w-[95%] rounded-[20px] pt-8 pb-16 px-6 md:px-12 mb-16 mx-auto" style={{
           backgroundColor: "#ff9800"
         }}>
           <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center mb-8">
