@@ -18,8 +18,10 @@ const teamLeads = [
   { name: "Aashir Ahmed", role: "Arm Dynamics Lead", image: "/figmaAssets/Aashir Ahmed.png" },
   { name: "Ahmad Zaki Momand", role: "Arm Dynamics Lead", image: "/figmaAssets/Ahmad Zaki Momand.png" },
   { name: "Ikkena Agusiegbe", role: "Scientific Analysis Lead", image: "/figmaAssets/Ikkena Agusiegbe.png" },
-  { name: "Christian Turjuman", role: "Power & Energy Systems", image: "/figmaAssets/Christian Turjuman.png" },
-  { name: "Harjeev Kohli", role: "Founder — Business Development Lead", image: "/figmaAssets/Harjeev Kohli.jpg" },
+  { name: "Christian Turjuman", role: "Power & Energy Systems Lead", image: "/figmaAssets/Christian Turjuman.png" },
+  { name: "Gulveer Kalle", role: "Business Development Lead", image: "/figmaAssets/Gulveer Kalle.jpg" },
+  { name: "Harsimr Dhillon", role: "Business Development Lead", image: "/figmaAssets/Harsimr Dhillon.jpg" },
+{ name: "Harjeev Kohli", role: "Founder & Advisor — Computer Engineering", image: "/figmaAssets/Harjeev Kohli.jpg" },
   { name: "Umar Shabbir", role: "Advisor — Aerospace Engineering", image: "/figmaAssets/Umar Shabbir.png" },
   { name: "Tabitha Grant", role: "Advisor — Engineering Innovation & Entrepreneurship", image: "/figmaAssets/Tabitha Grant.png" },
   { name: "Antonia Hoffman", role: "Advisor — Aerospace Engineering PhD Candidate", image: "/figmaAssets/Antonia Hoffman.png" },
@@ -69,17 +71,18 @@ const TeamMemberCard = ({ name, role, image }: { name: string; role: string; ima
   let designation = "";
   let displayRole = role;
   
-  if (role.startsWith("Founder")) {
-    designation = "Founder";
-    displayRole = role.replace("Founder — ", "").trim();
-  } else if (role.startsWith("Advisor")) {
-    designation = "Advisor";
-    displayRole = role.replace("Advisor — ", "").trim();
+  // Extract special designations before " — "
+  const dashIndex = role.indexOf(" — ");
+  if (dashIndex > 0) {
+    designation = role.substring(0, dashIndex).replace(/&amp;/g, '&');
+    displayRole = role.substring(dashIndex + 3).trim();
+  } else {
+    displayRole = role;
   }
 
   return (
     <Card className="w-full md:w-[250px] rounded-[20px] bg-neutral-50 border-0 relative">
-      {designation && (
+{designation && (
         <div className="absolute top-4 right-4 bg-[#0a1f44] text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
           {designation}
         </div>
