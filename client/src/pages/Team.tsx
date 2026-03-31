@@ -52,7 +52,7 @@ const subteams = [
   {
     name: "Business Development",
     description: "We manage the team's finances and sponsorships, ensuring that our members have the funds and resources available to undertake ambitious projects. We are also responsible for marketing, driving more attention to our projects through our website, LinkedIn and Instagram as higher visibility leads to more opportunities for members and sponsors alike.",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350'%3E%3Crect fill='%23e5e5e5' width='350' height='350'/%3E%3C/svg%3E",
+    image: "/figmaAssets/Business_Development.jpeg",
   },
   {
     name: "Scientific Analysis",
