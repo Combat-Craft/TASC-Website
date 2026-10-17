@@ -4,28 +4,38 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const teamCaptains = [
-  { name: "Ahmed Tabl", role: "Communications & Controls Lead", image: "/figmaAssets/Ahmed Tabl.png" },
   { name: "Aditya Sajwan", role: "Power & Energy Systems Lead", image: "/figmaAssets/Aditya Sajwan.png" },
+  { name: "Tim Laurence Andal", role: "TEMPORARY", image: "/figmaAssets/Tim Laurence Andal.png"}, 
 ];
 
 const teamLeads = [
   { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
   { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png" },
+  { name: "Artemis Lee", role: "Autonomous Navigation Lead", image: "/figmaAssets/Artemis Lee.png" }, 
   { name: "Muntasir Munir", role: "Autonomous Navigation Lead", image: "/figmaAssets/Muntasir Munir.png" },
   { name: "Tim Laurence Andal", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Tim Laurence Andal.png" },
+  { name: "Karim Jaber", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/anonymous_icon.png"}, 
   { name: "Pranav Amladi", role: "Power & Energy Systems Lead", image: "/figmaAssets/Pranav Amladi.png" },
-  { name: "Rida-E Fatima", role: "Communications & Controls Lead", image: "/figmaAssets/Rida-E Fatima.png" },
+  { name: "Doga Kaptanoglu", role: "Communications & Controls Lead", image: "/figmaAssets/Doga Kaptanoglu.jpg"}, 
+  { name: "Aayan Hossain", role: "Communications & Controls Lead", images: "/figmaAssets/Aayan Hossain.png"}, 
   { name: "Aashir Ahmed", role: "Arm Dynamics Lead", image: "/figmaAssets/Aashir Ahmed.png" },
+  { name: "Thant Nyi Lwin", role: "Arm Dynamics Lead", image: "/figmaAssets/Thant Nyi Lwin.png"}, 
   { name: "Ahmad Zaki Momand", role: "Arm Dynamics Lead", image: "/figmaAssets/Ahmad Zaki Momand.png" },
   { name: "Ikkena Agusiegbe", role: "Scientific Analysis Lead", image: "/figmaAssets/Ikkena Agusiegbe.png" },
+  { name: "Layla Fernandes", role: "Scientific Analysis Lead", image: "/figmaAssets/Layla Fernandes.png"}, 
   { name: "Christian Turjuman", role: "Power & Energy Systems Lead", image: "/figmaAssets/Christian Turjuman.png" },
+  { name: "Arnav Deb", role: "Power & Energy Systems Lead", image: "/figmaAssets/Arnav Deb.png"}, 
+  { name: "Shaxzood Mirkomilov", role: "Power & Energy Systems Lead", image: "/figmaAssets/anonymous_icon.png"}, 
   { name: "Gulveer Kalle", role: "Business Development Lead", image: "/figmaAssets/Gulveer Kalle.jpg" },
   { name: "Harsimr Dhillon", role: "Business Development Lead", image: "/figmaAssets/Harsimr Dhillon.jpg" },
-{ name: "Harjeev Kohli", role: "Founder & Advisor — Computer Engineering", image: "/figmaAssets/Harjeev Kohli.jpg" },
+  { name: "Connie Dong", role: "Business Development Lead", image: "/figmaAssets/Connie Dong.png"}, 
+  { name: "Harjeev Kohli", role: "Founder & Advisor — Computer Engineering", image: "/figmaAssets/Harjeev Kohli.jpg" },
   { name: "Umar Shabbir", role: "Advisor — Aerospace Engineering", image: "/figmaAssets/Umar Shabbir.png" },
   { name: "Tabitha Grant", role: "Advisor — Engineering Innovation & Entrepreneurship", image: "/figmaAssets/Tabitha Grant.png" },
   { name: "Antonia Hoffman", role: "Advisor — Aerospace Engineering PhD Candidate", image: "/figmaAssets/Antonia Hoffman.png" },
-  { name: "Ashu Syal", role: "Advisor — Director, Innovation Boost Zone (IBZ)", image: "/figmaAssets/Ashu Syal.png" },
+  { name: "Ashu Syal", role: "Advisor — Director, Innovation Boost Zone (IBZ)", image: "/figmaAssets/Ashu Syal.png" }, 
+  { name: "Ahmed Tabl", role: "Advisor — TEMPORARY", image: "/figmaAssets/Ahmed Tabl.png" },
+  { name: "Rida-E Fatima", role: "Advisor — TEMPORARY", image: "/figmaAssets/Rida-E Fatima.png" },
 ];
 
 const subteams = [
