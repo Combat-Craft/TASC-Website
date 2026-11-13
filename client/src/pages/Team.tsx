@@ -4,28 +4,34 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const teamCaptains = [
-  { name: "Ahmed Tabl", role: "Communications & Controls Lead", image: "/figmaAssets/Ahmed Tabl.png" },
-  { name: "Aditya Sajwan", role: "Power & Energy Systems Lead", image: "/figmaAssets/Aditya Sajwan.png" },
+  { name: "Thant Nyi Lwin", role: "Captain", image: "/figmaAssets/Thant Nyi Lwin.png" },
+  { name: "Tim Laurence Andal", role: "Captain", image: "/figmaAssets/Tim Laurence Andal.png" },
 ];
 
 const teamLeads = [
-  { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
   { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png" },
-  { name: "Muntasir Munir", role: "Autonomous Navigation Lead", image: "/figmaAssets/Muntasir Munir.png" },
-  { name: "Tim Laurence Andal", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Tim Laurence Andal.png" },
-  { name: "Pranav Amladi", role: "Power & Energy Systems Lead", image: "/figmaAssets/Pranav Amladi.png" },
-  { name: "Rida-E Fatima", role: "Communications & Controls Lead", image: "/figmaAssets/Rida-E Fatima.png" },
+  { name: "Artemis Lee", role: "Autonomous Navigation Lead", image: "/figmaAssets/Artemis Lee.png" },
+  { name: "Doga Kaptanoglu", role: "Communications & Controls Lead", image: "/figmaAssets/Doga Kaptanoglu.jpg" },
+  { name: "Aayan Hossain", role: "Communications & Controls Lead", image: "/figmaAssets/Aayan Hossain.png" },
+  { name: "Karim Jaber", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Karim Jaber.png" },
+  { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
+  { name: "Jadd Hlaihel", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Jadd Hlaihel.png" },
+  { name: "Arnav Deb", role: "Power & Energy Systems Lead", image: "/figmaAssets/Arnav Deb.png" },
+  { name: "Shaxzood Mirkomilov", role: "Power & Energy Systems Lead", image: "/figmaAssets/Shaxzood Mirkomilov.jpg" },
   { name: "Aashir Ahmed", role: "Arm Dynamics Lead", image: "/figmaAssets/Aashir Ahmed.png" },
-  { name: "Ahmad Zaki Momand", role: "Arm Dynamics Lead", image: "/figmaAssets/Ahmad Zaki Momand.png" },
-  { name: "Ikkena Agusiegbe", role: "Scientific Analysis Lead", image: "/figmaAssets/Ikkena Agusiegbe.png" },
-  { name: "Christian Turjuman", role: "Power & Energy Systems Lead", image: "/figmaAssets/Christian Turjuman.png" },
+  { name: "Connie Dong", role: "Business Development Lead", image: "/figmaAssets/Connie Dong.png" },
   { name: "Gulveer Kalle", role: "Business Development Lead", image: "/figmaAssets/Gulveer Kalle.jpg" },
-  { name: "Harsimr Dhillon", role: "Business Development Lead", image: "/figmaAssets/Harsimr Dhillon.jpg" },
-{ name: "Harjeev Kohli", role: "Founder & Advisor — Computer Engineering", image: "/figmaAssets/Harjeev Kohli.jpg" },
-  { name: "Umar Shabbir", role: "Advisor — Aerospace Engineering", image: "/figmaAssets/Umar Shabbir.png" },
-  { name: "Tabitha Grant", role: "Advisor — Engineering Innovation & Entrepreneurship", image: "/figmaAssets/Tabitha Grant.png" },
-  { name: "Antonia Hoffman", role: "Advisor — Aerospace Engineering PhD Candidate", image: "/figmaAssets/Antonia Hoffman.png" },
-  { name: "Ashu Syal", role: "Advisor — Director, Innovation Boost Zone (IBZ)", image: "/figmaAssets/Ashu Syal.png" },
+  { name: "Layla Fernandes", role: "Scientific Analysis Lead", image: "/figmaAssets/Layla Fernandes.png" },
+];
+
+const teamAdvisors = [
+  { name: "Tabitha Grant", role: "Advisor", image: "/figmaAssets/Tabitha Grant.png" },
+  { name: "Harjeev Kohli", role: "Founder & Advisor", image: "/figmaAssets/Harjeev Kohli.jpg" },
+  { name: "Umar Shabbir", role: "Advisor", image: "/figmaAssets/Umar Shabbir.png" },
+  { name: "Rida-E Fatima", role: "Advisor", image: "/figmaAssets/Rida-E Fatima.png" },
+  { name: "Ahmed Tabl", role: "Advisor", image: "/figmaAssets/Ahmed Tabl.png" },
+  { name: "Ashu Syal", role: "Advisor", image: "/figmaAssets/Ashu Syal.png" },
+  { name: "Aditya Sajwan", role: "Advisor", image: "/figmaAssets/Aditya Sajwan.png" },
 ];
 
 const subteams = [
@@ -67,22 +73,18 @@ const subteams = [
 ];
 
 const TeamMemberCard = ({ name, role, image }: { name: string; role: string; image: string }) => {
-  // Extract special designations (Founder, Advisor, Director)
   let designation = "";
   let displayRole = role;
-  
-  // Extract special designations before " — "
+
   const dashIndex = role.indexOf(" — ");
   if (dashIndex > 0) {
-    designation = role.substring(0, dashIndex).replace(/&amp;/g, '&');
+    designation = role.substring(0, dashIndex).replace(/&amp;/g, "&");
     displayRole = role.substring(dashIndex + 3).trim();
-  } else {
-    displayRole = role;
   }
 
   return (
     <Card className="w-full md:w-[250px] rounded-[20px] bg-neutral-50 border-0 relative">
-{designation && (
+      {designation && (
         <div className="absolute top-4 right-4 bg-[#0a1f44] text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
           {designation}
         </div>
@@ -117,14 +119,15 @@ export const Team = () => {
             Team Captains
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
-            {teamCaptains.map((captain, index) => (
-              <Card key={index} className="w-full md:w-[470px] rounded-[20px] bg-neutral-50 border-0">
+            {teamCaptains.map((captain) => (
+              <Card key={captain.name} className="w-full md:w-[470px] rounded-[20px] bg-neutral-50 border-0">
                 <CardContent className="p-6 md:p-8 text-center">
                   <div className="w-[250px] md:w-[317px] h-[250px] md:h-[317px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
                     <img src={captain.image} alt={captain.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-gray-200 rounded-[20px] py-4 px-6">
                     <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
+                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[14px] md:text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -132,9 +135,21 @@ export const Team = () => {
           </div>
         </div>
 
+        <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center mb-8">
+          Team Leads
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
-          {teamLeads.map((member, index) => (
-            <TeamMemberCard key={index} name={member.name} role={member.role} image={member.image} />
+          {teamLeads.map((member) => (
+            <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} />
+          ))}
+        </div>
+
+        <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center mb-8">
+          Advisors
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
+          {teamAdvisors.map((member) => (
+            <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} />
           ))}
         </div>
 
@@ -143,18 +158,16 @@ export const Team = () => {
         </h2>
 
         <div className="space-y-8 max-w-[1100px] mx-auto">
-          {subteams.map((subteam, index) => (
-            <Card key={index} className="rounded-[20px] bg-neutral-50 border-0 overflow-hidden">
+          {subteams.map((subteam) => (
+            <Card key={subteam.name} className="rounded-[20px] bg-neutral-50 border-0 overflow-hidden">
               <CardContent className="p-0">
                 <div className="p-6 md:p-8">
                   <h3 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center md:text-left mb-6">{subteam.name}</h3>
                 </div>
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 px-6 md:px-8 pb-6 md:pb-8">
-                  {/* Image - Square */}
                   <div className="w-full md:w-[350px] h-[350px] flex-shrink-0 rounded-[20px] overflow-hidden bg-gray-200">
                     <img src={subteam.image} alt={subteam.name} className="w-full h-full object-cover" />
                   </div>
-                  {/* Text */}
                   <div className="flex-1 flex flex-col justify-center h-full md:h-[350px]">
                     <div className="bg-[#ff9800] rounded-[20px] p-6 md:p-8 h-full flex flex-col justify-center">
                       <p className="[font-family:'BeVietnam'] font-normal text-black text-[18px] md:text-[20px] tracking-[0] leading-[24px] md:leading-[30px] text-center md:text-left">
