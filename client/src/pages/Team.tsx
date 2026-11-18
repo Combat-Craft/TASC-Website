@@ -4,34 +4,33 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const teamCaptains = [
-  { name: "Thant Nyi Lwin", role: "Captain", image: "/figmaAssets/Thant Nyi Lwin.png" },
-  { name: "Tim Laurence Andal", role: "Captain", image: "/figmaAssets/Tim Laurence Andal.png" },
+  { name: "Thant Nyi Lwin", role: "Captain", image: "/figmaAssets/Thant Nyi Lwin.png", linkedin: "https://www.linkedin.com/in/thant-nyi-lwin/" },
+  { name: "Tim Laurence Andal", role: "Captain", image: "/figmaAssets/Tim Laurence Andal.png", linkedin: "https://www.linkedin.com/in/timlaurence-andal/" },
 ];
 
 const teamLeads = [
-  { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png" },
-  { name: "Artemis Lee", role: "Autonomous Navigation Lead", image: "/figmaAssets/Artemis Lee.png" },
-  { name: "Doga Kaptanoglu", role: "Communications & Controls Lead", image: "/figmaAssets/Doga Kaptanoglu.jpg" },
-  { name: "Aayan Hossain", role: "Communications & Controls Lead", image: "/figmaAssets/Aayan Hossain.png" },
-  { name: "Karim Jaber", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Karim Jaber.png" },
-  { name: "Bagalavan Thurairatnam", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Bagalavan Thurairatnam.png" },
-  { name: "Jadd Hlaihel", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Jadd Hlaihel.png" },
-  { name: "Arnav Deb", role: "Power & Energy Systems Lead", image: "/figmaAssets/Arnav Deb.png" },
-  { name: "Shaxzood Mirkomilov", role: "Power & Energy Systems Lead", image: "/figmaAssets/Shaxzood Mirkomilov.jpg" },
-  { name: "Aashir Ahmed", role: "Arm Dynamics Lead", image: "/figmaAssets/Aashir Ahmed.png" },
+  { name: "Mina Tadros", role: "Autonomous Navigation Lead", image: "/figmaAssets/Mina Tadros.png", linkedin: "https://www.linkedin.com/in/mntadros/" },
+  { name: "Artemis Lee", role: "Autonomous Navigation Lead", image: "/figmaAssets/Artemis Lee.png", linkedin: "https://www.linkedin.com/in/artemisylee/" },
+  { name: "Doga Kaptanoglu", role: "Communications & Controls Lead", image: "/figmaAssets/Doga Kaptanoglu.jpg", linkedin: "https://www.linkedin.com/in/doga-kaptanoglu-dk/" },
+  { name: "Aayan Hossain", role: "Communications & Controls Lead", image: "/figmaAssets/Aayan Hossain.png", linkedin: "https://www.linkedin.com/in/aayan-hossain-8a4ba6274/" },
+  { name: "Karim Jaber", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Karim Jaber.png", linkedin: "https://www.linkedin.com/in/karim-jaber-957949369/" },
+  { name: "Jadd Hlaihel", role: "Drivetrain & Chassis Lead", image: "/figmaAssets/Jadd Hlaihel.png", linkedin: "https://www.linkedin.com/in/jaddhlaihel/" },
+  { name: "Arnav Deb", role: "Power & Energy Systems Lead", image: "/figmaAssets/Arnav Deb.png", linkedin: "https://www.linkedin.com/in/arnav-deb/" },
+  { name: "Shaxzood Mirkomilov", role: "Power & Energy Systems Lead", image: "/figmaAssets/Shaxzood Mirkomilov.jpg", linkedin: "https://www.linkedin.com/in/shaxzod-mirkomilov-9541a8267/" },
+  { name: "Aashir Ahmed", role: "Arm Dynamics Lead", image: "/figmaAssets/Aashir Ahmed.png", linkedin: "https://www.linkedin.com/in/aashir-ahmed-a52604272/" },
   { name: "Connie Dong", role: "Business Development Lead", image: "/figmaAssets/Connie Dong.png" },
-  { name: "Gulveer Kalle", role: "Business Development Lead", image: "/figmaAssets/Gulveer Kalle.jpg" },
-  { name: "Layla Fernandes", role: "Scientific Analysis Lead", image: "/figmaAssets/Layla Fernandes.png" },
+  { name: "Gulveer Kalle", role: "Business Development Lead", image: "/figmaAssets/Gulveer Kalle.jpg", linkedin: "https://www.linkedin.com/in/gulveer-kalle/" },
+  { name: "Layla Fernandes", role: "Scientific Analysis Lead", image: "/figmaAssets/Layla Fernandes.png", linkedin: "https://www.linkedin.com/in/layla-fernandes-914279382/" },
 ];
 
 const teamAdvisors = [
-  { name: "Tabitha Grant", role: "Advisor", image: "/figmaAssets/Tabitha Grant.png" },
-  { name: "Harjeev Kohli", role: "Founder & Advisor", image: "/figmaAssets/Harjeev Kohli.jpg" },
-  { name: "Umar Shabbir", role: "Advisor", image: "/figmaAssets/Umar Shabbir.png" },
-  { name: "Rida-E Fatima", role: "Advisor", image: "/figmaAssets/Rida-E Fatima.png" },
-  { name: "Ahmed Tabl", role: "Advisor", image: "/figmaAssets/Ahmed Tabl.png" },
-  { name: "Ashu Syal", role: "Advisor", image: "/figmaAssets/Ashu Syal.png" },
-  { name: "Aditya Sajwan", role: "Advisor", image: "/figmaAssets/Aditya Sajwan.png" },
+  { name: "Tabitha Grant", role: "Advisor", image: "/figmaAssets/Tabitha Grant.png", linkedin: "https://www.linkedin.com/in/tabithagrant/" },
+  { name: "Harjeev Kohli", role: "Founder & Advisor", image: "/figmaAssets/Harjeev Kohli.jpg", linkedin: "https://www.linkedin.com/in/harjeev-kohli/" },
+  { name: "Umar Shabbir", role: "Advisor", image: "/figmaAssets/Umar Shabbir.png", linkedin: "https://www.linkedin.com/in/umaremshabbir/" },
+  { name: "Rida-E Fatima", role: "Advisor", image: "/figmaAssets/Rida-E Fatima.jpg", linkedin:"https://www.linkedin.com/in/rida-efatima/" },
+  { name: "Ahmed Tabl", role: "Advisor", image: "/figmaAssets/Ahmed Tabl.png", linkedin:"https://www.linkedin.com/in/ahmed-tabl-12a040260/" },
+  { name: "Ashu Syal", role: "Advisor", image: "/figmaAssets/Ashu Syal.png", linkedin: "https://www.linkedin.com/in/ashutoshsyal/" },
+  { name: "Aditya Sajwan", role: "Advisor", image: "/figmaAssets/Aditya Sajwan.png", linkedin: "https://www.linkedin.com/in/adityasajwan10/" },
 ];
 
 const subteams = [
@@ -72,7 +71,9 @@ const subteams = [
   },
 ];
 
-const TeamMemberCard = ({ name, role, image }: { name: string; role: string; image: string }) => {
+const TeamMemberCard = ({name,role, image, linkedin,}:
+   {name: string; role: string; image: string; linkedin?: string;
+}) => {
   let designation = "";
   let displayRole = role;
 
@@ -82,16 +83,33 @@ const TeamMemberCard = ({ name, role, image }: { name: string; role: string; ima
     displayRole = role.substring(dashIndex + 3).trim();
   }
 
-  return (
-    <Card className="w-full md:w-[250px] rounded-[20px] bg-neutral-50 border-0 relative">
+  const card = (
+    <Card
+      className={`group w-full md:w-[250px] rounded-[20px] bg-neutral-50 border-0 relative transition duration-300 ${
+        linkedin ? "hover:-translate-y-2 hover:shadow-xl" : ""
+      }`}
+    >
       {designation && (
         <div className="absolute top-4 right-4 bg-[#0a1f44] text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
           {designation}
         </div>
       )}
       <CardContent className="p-6 text-center">
-        <div className="w-[200px] h-[200px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+        <div className="relative w-[200px] h-[200px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src={image}
+            alt={name}
+            className={`w-full h-full object-cover transition duration-300 ${
+              linkedin ? "group-hover:scale-110" : ""
+            }`}
+          />
+          {linkedin && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition duration-300 group-hover:opacity-100">
+              <span className="rounded-full border border-white px-3 py-1 text-sm font-medium text-white">
+                View LinkedIn
+              </span>
+            </div>
+          )}
         </div>
         <div className="bg-gray-200 rounded-[20px] py-4 px-6">
           <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{name}</p>
@@ -99,6 +117,20 @@ const TeamMemberCard = ({ name, role, image }: { name: string; role: string; ima
         </div>
       </CardContent>
     </Card>
+  );
+
+  return linkedin ? (
+    <a
+      href={linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${name} on LinkedIn`}
+      className="block w-full md:w-[250px]"
+    >
+      {card}
+    </a>
+  ) : (
+    card
   );
 };
 
@@ -119,19 +151,53 @@ export const Team = () => {
             Team Captains
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
-            {teamCaptains.map((captain) => (
-              <Card key={captain.name} className="w-full md:w-[470px] rounded-[20px] bg-neutral-50 border-0">
-                <CardContent className="p-6 md:p-8 text-center">
-                  <div className="w-[250px] md:w-[317px] h-[250px] md:h-[317px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-                    <img src={captain.image} alt={captain.name} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="bg-gray-200 rounded-[20px] py-4 px-6">
-                    <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
-                    <p className="[font-family:'BeVietnam'] font-normal text-black text-[14px] md:text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {teamCaptains.map((captain) => {
+  const card = (
+    <Card
+      className={`group w-full md:w-[470px] rounded-[20px] bg-neutral-50 border-0 transition duration-300 ${
+        captain.linkedin ? "hover:-translate-y-2 hover:shadow-xl" : ""
+      }`}
+    >
+      <CardContent className="p-6 md:p-8 text-center">
+        <div className="relative w-[250px] md:w-[317px] h-[250px] md:h-[317px] mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src={captain.image}
+            alt={captain.name}
+            className={`w-full h-full object-cover transition duration-300 ${
+              captain.linkedin ? "group-hover:scale-110" : ""
+            }`}
+          />
+          {captain.linkedin && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition duration-300 group-hover:opacity-100">
+              <span className="rounded-full border border-white px-4 py-2 text-sm font-medium text-white">
+                View LinkedIn
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="bg-gray-200 rounded-[20px] py-4 px-6">
+          <p className="[font-family:'BeVietnam'] font-bold text-black text-[18px] md:text-[20px] tracking-[0] leading-[30px]">{captain.name}</p>
+          <p className="[font-family:'BeVietnam'] font-normal text-black text-[14px] md:text-[15px] tracking-[0] leading-[30px]">{captain.role}</p>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  return captain.linkedin ? (
+    <a
+      key={captain.name}
+      href={captain.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${captain.name} on LinkedIn`}
+      className="block w-full md:w-[470px]"
+    >
+      {card}
+    </a>
+  ) : (
+    <div key={captain.name}>{card}</div>
+  );
+})}
           </div>
         </div>
 
@@ -139,9 +205,9 @@ export const Team = () => {
           Team Leads
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
-          {teamLeads.map((member) => (
-            <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} />
-          ))}
+         {teamLeads.map((member) => (
+          <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} linkedin={member.linkedin} />
+            ))}
         </div>
 
         <h2 className="[font-family:'Poppins'] font-bold text-[28px] md:text-[30px] text-black text-center mb-8">
@@ -149,9 +215,10 @@ export const Team = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1300px] mx-auto mb-24 justify-items-center">
           {teamAdvisors.map((member) => (
-            <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} />
-          ))}
+            <TeamMemberCard key={member.name} name={member.name} role={member.role} image={member.image} linkedin={member.linkedin} />
+        ))}
         </div>
+        
 
         <h2 className="[font-family:'Poppins'] font-bold text-[36px] md:text-[48px] text-black text-center mb-12">
           OUR SUBTEAMS
