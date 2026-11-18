@@ -91,7 +91,7 @@ export const Home = (): JSX.Element => {
               <img
                 className="w-full h-full object-cover rounded-[20px]"
                 alt="Image"
-                src="/figmaAssets/image-17.jpg"
+                src="/figmaAssets/CIRC-2026-MAIN-PAGE-PHOTO.jpg"
               />
             </div>
 
